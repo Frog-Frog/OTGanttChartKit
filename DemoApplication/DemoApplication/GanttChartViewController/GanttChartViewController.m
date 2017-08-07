@@ -17,7 +17,8 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
     GanttChartSectionTypeSquare,
     GanttChartSectionTypeDiamond,
     GanttChartSectionTypeTriangle,
-    GanttChartSectionTypeRatio
+    GanttChartSectionTypeRatio,
+    GanttChartSectionTypeDotLine
 };
 
 @interface GanttChartViewController ()<UITableViewDataSource,UITableViewDelegate,OTGanttChartViewDataSource,OTGanttChartViewDelegate>
@@ -73,7 +74,7 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 6;
+    return 7;
 }
 
 
@@ -94,6 +95,10 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
         case GanttChartSectionTypeRatio:
             
             return 3;
+        
+        case GanttChartSectionTypeDotLine:
+            
+            return 2;
     }
     return 0;
 }
@@ -137,7 +142,16 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             }
             
             break;
+        
+        case GanttChartSectionTypeDotLine:
             
+            if (indexPath.row == 0) {
+                cellText = @"isDotLine = NO";
+            } else if (indexPath.row == 1) {
+                cellText = @"isDotLine = YES";
+            }
+            
+            break;
         default:
             break;
     }
@@ -189,7 +203,12 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             
         case GanttChartSectionTypeRatio:
             
-            headerText = @"EnabledProcessViewRatio";
+            headerText = @"ProcessViewRatio";
+            break;
+        
+        case GanttChartSectionTypeDotLine:
+            
+            headerText = @"ProcessViewDotLine";
             break;
             
         default:
@@ -241,7 +260,7 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
 #pragma mark - Section
 - (NSInteger)numberOfSectionsInGanttChartView:(OTGanttChartView *)ganttChartView
 {
-    return 6;
+    return 7;
 }
 
 
@@ -294,6 +313,14 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             processView.startRatio = 0.2;
             processView.finishRatio = 0.4;
             break;
+        
+        case GanttChartSectionTypeDotLine:
+            
+            processView.figureType = OTGFigureTypeCircle;
+            processView.dateArray = @[[dateArray firstObject],[dateArray lastObject]];
+            processView.isDotLine = YES;
+            break;
+            
     }
     
     
@@ -320,8 +347,10 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             return 1;
             
         case GanttChartSectionTypeRatio:
+        case GanttChartSectionTypeDotLine:
             
             return 0;
+            
     }
     return 1;
 }
@@ -359,6 +388,7 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             break;
         
         default:
+            
             break;
     }
     
@@ -389,6 +419,10 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             case GanttChartSectionTypeRatio:
             
             return 3;
+            
+            case GanttChartSectionTypeDotLine:
+            
+            return 2;
     }
     return 0;
 }
@@ -410,8 +444,10 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             return 2;
             
             case GanttChartSectionTypeRatio:
+            case GanttChartSectionTypeDotLine:
             
             return 1;
+        
     }
     return 0;
 }
@@ -426,18 +462,6 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
         [dateArray addObject:[OTGCommonClass createDate:[NSDate date] differenceDays:i]];
     }
     processView.dateArray = dateArray;
-    
-    if (indexPath.section == 0) {
-        
-    } else if (indexPath.section == 1) {
-        
-    } else if (indexPath.section == 2) {
-        
-    } else if (indexPath.section == 3) {
-        
-    } else if (indexPath.section == 4) {
-        
-    }
     
     switch (indexPath.section) {
         case GanttChartSectionTypeNoFigure:
@@ -486,7 +510,18 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
                 processView.finishRatio = 0.6;
             
             }
+            break;
         
+        case GanttChartSectionTypeDotLine:
+            
+            processView.figureType = OTGFigureTypeCircle;
+            processView.dateArray = @[[dateArray firstObject],[dateArray lastObject]];
+            if (indexPath.row == 0) {
+                processView.isDotLine = NO;
+            } else if (indexPath.row == 1) {
+                processView.isDotLine = YES;
+            }
+            
         default:
             break;
     }
@@ -607,6 +642,10 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             
             return [UIColor brownColor];
             
+            case GanttChartSectionTypeDotLine:
+            
+            return [UIColor purpleColor];
+            
         default:
             break;
     }
@@ -641,6 +680,10 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             case GanttChartSectionTypeRatio:
             
             return [UIColor brownColor];
+            
+            case GanttChartSectionTypeDotLine:
+            
+            return [UIColor purpleColor];
             
         default:
             break;
