@@ -98,7 +98,7 @@ static NSDateFormatter *dateFormatter;
                 {
                     return [self hexToUIColor:@"515151" alpha:1.0f];
                 }
-                case OTGPartsTypeRefleshArrowImage:
+                case OTGPartsTypeRefreshArrowImage:
                 {
                     return [self hexToUIColor:@"9c9c9c" alpha:1.0f];
                 }
@@ -155,7 +155,7 @@ static NSDateFormatter *dateFormatter;
                 {
                     return [self hexToUIColor:@"C7C7C7" alpha:1.0f];
                 }
-                case OTGPartsTypeRefleshArrowImage:
+                case OTGPartsTypeRefreshArrowImage:
                 {
                     return [self hexToUIColor:@"9c9c9c" alpha:1.0f];
                 }

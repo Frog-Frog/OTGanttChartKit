@@ -137,7 +137,7 @@ typedef NS_ENUM(NSInteger, OTGPartsType)
     OTGPartsTypeTodayHighlitedBackground,
     OTGPartsTypeDateText,
     OTGPartsTypeTodayHighlitedDateText,
-    OTGPartsTypeRefleshArrowImage,
+    OTGPartsTypeRefreshArrowImage,
     OTGPartsTypeTodayLineColor
 };
 

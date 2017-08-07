@@ -92,7 +92,8 @@
     self.themeMode = OTGThemeModeDark;
     
     self.todayLineEnabled = NO;
-    self.refleshControlEnabled = NO;
+    self.leftRefreshControlEnabled = NO;
+    self.rightRefreshControlEnabled = NO;
     
     self.dateWidth = OTGDateWidth;
     self.dateSeparatorWidth = OTGChartSeparatorWidth;
@@ -209,7 +210,7 @@
     self.scrollBackgroundColor = [OTGCommonClass colorFromThemeMode:self.themeMode partsType:OTGPartsTypeScrollBackground];
     self.dateSeparatorColor = [OTGCommonClass colorFromThemeMode:self.themeMode partsType:OTGPartsTypeDateText];
     self.rowSeparatorColor = [OTGCommonClass colorFromThemeMode:self.themeMode partsType:OTGPartsTypeRowSeparator];
-    self.refleshArrowColor = [OTGCommonClass colorFromThemeMode:self.themeMode partsType:OTGPartsTypeRefleshArrowImage];
+    self.refreshArrowColor = [OTGCommonClass colorFromThemeMode:self.themeMode partsType:OTGPartsTypeRefreshArrowImage];
     self.dotSeparatorColor = [OTGCommonClass colorFromThemeMode:self.themeMode partsType:OTGPartsTypeDotSeparator];
     self.chartBorderColor = [OTGCommonClass colorFromThemeMode:self.themeMode partsType:OTGPartsTypeChartBorder];
     self.todayLineColor = [OTGCommonClass colorFromThemeMode:self.themeMode partsType:OTGPartsTypeTodayLineColor];
@@ -224,7 +225,7 @@
     
     image = [image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     imageView.image = image;
-    imageView.tintColor = self.refleshArrowColor;
+    imageView.tintColor = self.refreshArrowColor;
 }
 
 
@@ -835,9 +836,9 @@
 }
 
 
-- (void)setRefleshArrowColor:(UIColor *)refleshArrowColor
+- (void)setRefreshArrowColor:(UIColor *)refreshArrowColor
 {
-    _refleshArrowColor = refleshArrowColor;
+    _refreshArrowColor = refreshArrowColor;
     [self prepareArrowImageView:self.leftArrowImageView
                       imageName:@"otg_icon_arrow_left"];
     
@@ -989,16 +990,6 @@
 
 
 #pragma mark function
-- (void)setRefleshControlEnabled:(BOOL)refleshControlEnabled
-{
-    _refleshControlEnabled = refleshControlEnabled;
-    
-    self.ganttScrollView.bounces = (refleshControlEnabled)? YES:NO;
-    self.leftArrowImageView.hidden = (refleshControlEnabled)? NO:YES;
-    self.rightArrowImageView.hidden = (refleshControlEnabled)? NO:YES;
-}
-
-
 - (void)setTodayLineEnabled:(BOOL)todayLineEnabled
 {
     _todayLineEnabled = todayLineEnabled;
@@ -1210,15 +1201,28 @@
         [self.delegate ganttChartView:self didHorizontalScroll:scrollView];
     }
     
-    if (self.refleshControlEnabled) {
+    if (self.leftRefreshControlEnabled) {
         if (scrollView.contentOffset.x < 0) {
+            
             //LeftBounce
             if (scrollView.contentOffset.x < -OTGScrollReloadDistance) {
-
+                
                 scrollView.contentOffset = CGPointMake(-OTGScrollReloadDistance,0);
             }
+        }
+        
+        return;
+    } else {
+        if (scrollView.contentOffset.x < 0) {
+            scrollView.contentOffset = CGPointZero;
+        }
+        
+        return;
+    }
+    
+    if (self.rightRefreshControlEnabled) {
+        if (scrollView.contentOffset.x + scrollView.frame.size.width > scrollView.contentSize.width) {
             
-        } else if (scrollView.contentOffset.x + scrollView.frame.size.width > scrollView.contentSize.width) {
             //RightBounce
             if (scrollView.contentOffset.x + scrollView.frame.size.width > scrollView.contentSize.width + OTGScrollReloadDistance){
                 
@@ -1226,21 +1230,34 @@
                 
             }
         }
+        
+        return;
+    } else {
+        
+        if (scrollView.contentOffset.x + scrollView.frame.size.width > scrollView.contentSize.width) {
+            
+            scrollView.contentOffset = CGPointMake(scrollView.contentSize.width - scrollView.frame.size.width, 0);
+            
+        }
+        
+        return;
     }
+    
 }
 
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    if (self.refleshControlEnabled) {
+    if (self.leftRefreshControlEnabled) {
         if (scrollView.contentOffset.x <= -OTGScrollReloadDistance ) {
-            
             if ([self.delegate respondsToSelector:@selector(ganttChartView:scrolledPrevieous:)]) {
                 [self.delegate ganttChartView:self scrolledPrevieous:scrollView];
             }
-            
-        } else if (scrollView.contentOffset.x + scrollView.frame.size.width >= scrollView.contentSize.width + OTGScrollReloadDistance) {
-            
+        }
+    }
+    
+    if (self.rightRefreshControlEnabled) {
+        if (scrollView.contentOffset.x + scrollView.frame.size.width >= scrollView.contentSize.width + OTGScrollReloadDistance) {
             if ([self.delegate respondsToSelector:@selector(ganttChartView:scrolledNext:)]) {
                 [self.delegate ganttChartView:self scrolledNext:scrollView];
             }

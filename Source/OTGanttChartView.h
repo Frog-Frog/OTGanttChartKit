@@ -95,7 +95,7 @@
 @property(nonatomic) UIColor *dateAreaBackgroundColor;
 @property(nonatomic) UIColor *scrollBackgroundColor;
 @property(nonatomic) UIColor *rowSeparatorColor;
-@property(nonatomic) UIColor *refleshArrowColor;
+@property(nonatomic) UIColor *refreshArrowColor;
 @property(nonatomic) UIColor *dateTextColor;
 @property(nonatomic) UIColor *todayHiligtedDateTextColor;
 @property(nonatomic) UIColor *todayLineColor;
@@ -134,7 +134,8 @@
 @property(nonatomic) NSInteger minimumPointViewWidthDays;
 
 @property(nonatomic) BOOL todayLineEnabled;
-@property(nonatomic) BOOL refleshControlEnabled;
+@property(nonatomic) BOOL leftRefreshControlEnabled;
+@property(nonatomic) BOOL rightRefreshControlEnabled;
 
 @property(nonatomic,readonly) NSDate *currentStartDate;
 @property(nonatomic,readonly) NSDate *currentLastDate;
