@@ -51,6 +51,11 @@
 + (NSInteger)foundSameDateIndexFromDateArray:(NSArray<NSDate *> *)dateArray
                                         date:(NSDate *)date;
 
+
++ (NSInteger)foundSameDateIndexFromDateArrayByCompare:(NSArray<NSDate *> *)dateArray
+                                                 date:(NSDate *)date;
+
+
 #pragma mark - Date
 
 #pragma mark Contain Check
