@@ -644,7 +644,7 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             
             case GanttChartSectionTypeDotLine:
             
-            return [UIColor purpleColor];
+            return [UIColor cyanColor];
             
         default:
             break;
@@ -683,7 +683,7 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             
             case GanttChartSectionTypeDotLine:
             
-            return [UIColor purpleColor];
+            return [UIColor cyanColor];
             
         default:
             break;
