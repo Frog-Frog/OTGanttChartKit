@@ -136,7 +136,8 @@
     NSInteger placeCount = 0;
     
     for (NSInteger i = firstDateIndex; i <= lastDateIndex; i++) {
-        NSInteger sameIndex = [OTGCommonClass foundSameDateIndexFromDateArray:self.dateArray date:self.showDateArray[i]];
+        NSInteger sameIndex = [OTGCommonClass foundSameDateIndexFromDateArrayByCompare:self.dateArray
+                                                                                  date:self.showDateArray[i]];
         
         //一日ごとのバー描画の開始と終了地点
         //初回は図形を描いてからなので、図形の中心からバーをスタートする
