@@ -19,6 +19,9 @@
 
 #import "OTGCommonClass.h"
 
+static NSCalendar *calendar;
+static NSDateFormatter *dateFormatter;
+
 @implementation OTGCommonClass
 
 #pragma mark - Color
@@ -367,7 +370,9 @@
  */
 + (NSDate *)firstDateInMonthFromDate:(NSDate *)date
 {
-    NSCalendar *calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    if (!calendar) {
+        calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    }
     
     NSDateComponents *dateComponents = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitWeekday
                                                    fromDate:date];
@@ -380,7 +385,9 @@
 
 + (NSDate *)lastDateInMonthFromDate:(NSDate *)date
 {
-    NSCalendar *calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    if (!calendar) {
+        calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    }
     
     NSDateComponents *dateComponents = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitWeekday
                                                    fromDate:date];
@@ -404,7 +411,9 @@
  */
 + (NSDate *)createDate:(NSDate *)date differenceDays:(NSInteger)days
 {
-    NSCalendar *calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    if (!calendar) {
+        calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    }
     
     NSDateComponents *dateComponents = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitWeekday
                                                    fromDate:date];
@@ -424,7 +433,9 @@
  */
 + (NSDate *)createDate:(NSDate *)date differenceMonths:(NSInteger)months
 {
-    NSCalendar *calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    if (!calendar) {
+        calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    }
     
     NSDateComponents *dateComponents = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay|NSCalendarUnitWeekday
                                                    fromDate:date];
@@ -444,9 +455,13 @@
  */
 + (NSDate *)adjustZeroClock:(NSDate *)date
 {
-    NSCalendar *calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    if (!calendar) {
+        calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    }
+    
     NSDateComponents *components = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay
                                                fromDate:date];
+    
     return [calendar dateFromComponents:components];
 }
 
@@ -468,8 +483,9 @@
         return 0;
     }
     
-    NSCalendar *calendar = [[NSCalendar alloc]
-                            initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    if (!calendar) {
+        calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    }
     
     NSDateComponents *components = [calendar components:NSCalendarUnitDay
                                                fromDate:startDate
@@ -496,6 +512,7 @@
     
     date1 = [self adjustZeroClock:date1];
     date2 = [self adjustZeroClock:date2];
+    
     return ([date1 compare:date2] == NSOrderedSame)? YES : NO;
 }
 
@@ -516,11 +533,14 @@
 {
     if (!string || [string length] == 0) return nil;
     
-    NSDateFormatter *keyDateFormatter = [[NSDateFormatter alloc]init];
-    keyDateFormatter.locale = [[NSLocale alloc]initWithLocaleIdentifier:@"en_US_POSIX"];
-    keyDateFormatter.dateFormat = format;
+    if (!dateFormatter) {
+        dateFormatter = [[NSDateFormatter alloc]init];
+        dateFormatter.locale = [[NSLocale alloc]initWithLocaleIdentifier:@"en_US_POSIX"];
+    }
     
-    return [keyDateFormatter dateFromString:string];
+    dateFormatter.dateFormat = format;
+    
+    return [dateFormatter dateFromString:string];
 }
 
 
@@ -536,10 +556,13 @@
 {
     if (!date) return @"";
     
-    NSDateFormatter *keyDateFormatter = [[NSDateFormatter alloc]init];
-    keyDateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
-    keyDateFormatter.dateFormat = format;
-    return [keyDateFormatter stringFromDate:date];
+    if (!dateFormatter) {
+        dateFormatter = [[NSDateFormatter alloc]init];
+        dateFormatter.locale = [[NSLocale alloc]initWithLocaleIdentifier:@"en_US_POSIX"];
+    }
+    
+    dateFormatter.dateFormat = format;
+    return [dateFormatter stringFromDate:date];
 }
 
 
@@ -552,14 +575,17 @@
 + (NSString *)weekStringFromDate:(NSDate *)date
                 localeIdentifier:(NSString *)localeIdentifier;
 {
-    NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents* comps = [calendar components:NSCalendarUnitWeekday
+    if (!calendar) {
+        calendar = [[NSCalendar alloc]initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    }
+    
+    NSDateComponents* components = [calendar components:NSCalendarUnitWeekday
                                           fromDate:date];
     
     NSDateFormatter* dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:localeIdentifier];
     
-    return dateFormatter.shortWeekdaySymbols[comps.weekday-1];
+    return dateFormatter.shortWeekdaySymbols[components.weekday-1];
 }
 
 
