@@ -268,6 +268,30 @@
 }
 
 
+/**
+ リストから引数の日付が存在している場合indexを返す
+ 
+ @param dateArray 日付リスト
+ @param date 日付
+ @return インデックス
+ */
++ (NSInteger)foundSameDateIndexFromDateArrayByCompare:(NSArray<NSDate *> *)dateArray
+                                                 date:(NSDate *)date
+{
+    dateArray = [self sortDateArray:dateArray];
+    
+    __block NSInteger index = NSNotFound;
+    [dateArray enumerateObjectsUsingBlock:^(NSDate * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([self isEqualToDay1:date day2:obj] ) {
+            index = idx;
+            *stop = YES;
+        }
+    }];
+    
+    return index;
+}
+
+
 #pragma mark - Date
 
 #pragma mark Contain Check
