@@ -255,7 +255,7 @@
                     continue;
                 }
                 
-                chartProcessView.dateArray = [OTGCommonClass sortDateArray:chartProcessView.dateArray];
+                chartProcessView.dateArray = [OTGCommonClass createAdjustDateArray:chartProcessView.dateArray];
                 chartProcessView.processNo = processNo;
                 
                 [processViewArray addObject:chartProcessView];
@@ -622,7 +622,9 @@
     __block NSInteger duplicationCount = 1;
     __weak typeof(self) weakSelf = self;
     [processArray enumerateObjectsUsingBlock:^(NSArray<NSDate *> *_Nonnull processDateArray, NSUInteger idx, BOOL * _Nonnull stop) {
-        
+     
+        processDateArray = [OTGCommonClass createDateArrayFromStartDate:[processDateArray firstObject] endDate:[processDateArray lastObject]];
+       
         if (![OTGCommonClass isContainProcessStartDate:[processDateArray firstObject]
                                        processLastDate:[processDateArray lastObject]
                                          showStartDate:[weakSelf.showDateArray firstObject]
