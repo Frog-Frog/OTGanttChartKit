@@ -623,8 +623,8 @@
     __weak typeof(self) weakSelf = self;
     [processArray enumerateObjectsUsingBlock:^(NSArray<NSDate *> *_Nonnull processDateArray, NSUInteger idx, BOOL * _Nonnull stop) {
      
-        processDateArray = [OTGCommonClass createDateArrayFromStartDate:[processDateArray firstObject] endDate:[processDateArray lastObject]];
-       
+        processDateArray = [self createShowDateArrayFromStartDate:[processDateArray firstObject] lastDate:[processDateArray lastObject]];
+        
         if (![OTGCommonClass isContainProcessStartDate:[processDateArray firstObject]
                                        processLastDate:[processDateArray lastObject]
                                          showStartDate:[weakSelf.showDateArray firstObject]
@@ -1212,14 +1212,10 @@
                 scrollView.contentOffset = CGPointMake(-OTGScrollReloadDistance,0);
             }
         }
-        
-        return;
     } else {
         if (scrollView.contentOffset.x < 0) {
             scrollView.contentOffset = CGPointZero;
         }
-        
-        return;
     }
     
     if (self.rightRefreshControlEnabled) {
@@ -1232,8 +1228,6 @@
                 
             }
         }
-        
-        return;
     } else {
         
         if (scrollView.contentOffset.x + scrollView.frame.size.width > scrollView.contentSize.width) {
@@ -1241,8 +1235,6 @@
             scrollView.contentOffset = CGPointMake(scrollView.contentSize.width - scrollView.frame.size.width, 0);
             
         }
-        
-        return;
     }
     
 }
