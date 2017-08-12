@@ -8,7 +8,7 @@
 
 #import "GanttChartViewController.h"
 
-#import <OTGanttChartKit/OTGanttChartKit.h>
+#import <OTGanttChartKit/OTGanttChartView.h>
 
 typedef NS_ENUM(NSInteger, GanttChartSectionType)
 {

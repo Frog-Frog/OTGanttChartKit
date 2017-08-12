@@ -2,20 +2,9 @@
 //  OTGanttChartKit.h
 //  OTGanttChartKit
 //
-//  Created by Tomosuke Okada on 2017/08/02.
+//  Created by Tomosuke Okada on 2017/08/12.
 //  Copyright © 2017年 TomosukeOkada. All rights reserved.
 //
-//  https://github.com/PKPK-Carnage/OTGanttChartKit
-
-/**
- [OTGanttChartView]
- 
- Copyright (c) [2017] [Tomosuke Okada]
- 
- This software is released under the MIT License.
- http://opensource.org/licenses/mit-license.ph
- 
- */
 
 #import <UIKit/UIKit.h>
 
@@ -27,14 +16,10 @@ FOUNDATION_EXPORT const unsigned char OTGanttChartKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <OTGanttChartKit/PublicHeader.h>
 
-#import "OTGanttChartConstant.h"
-#import "OTGCommonClass.h"
+#import <OTGanttChartKit/OTGanttChartView.h>
 
-#import "OTGanttChartView.h"
+#import <OTGanttChartKit/OTGChartProcessView.h>
+#import <OTGanttChartKit/OTGChartPointView.h>
 
-#import "OTGChartProcessView.h"
-#import "OTGChartPointView.h"
-
-
-
-
+#import <OTGanttChartKit/OTGCommonClass.h>
+#import <OTGanttChartKit/OTGanttChartConstant.h>
