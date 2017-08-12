@@ -13,11 +13,29 @@ To be prepared.
 Coming soon...
 
 ## Usage
-To be prepared.
-Coming soon...
+```objectivec:Objective-C
+
+OTGanttChartView *ganttChartView = [[OTGanttChartView alloc]initWithFrame:self.yourView.bounds];
+
+ganttChartView.dataSource = self;
+ganttChartView.delegate = self;
+
+// If you want to make original gantt chart, you can customize here.
+
+[self.yourView addSubView:ganttChartView];
+
+```
 
 ## Install
 
+###CocoaPods
+Add this to your Podfile.
+
+```PodFile
+pod 'OTGanttChartKit'
+```
+
+###Carthage
 To be prepared.
 Coming soon...
 
