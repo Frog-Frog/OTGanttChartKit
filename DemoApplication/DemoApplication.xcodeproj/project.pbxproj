@@ -14,6 +14,7 @@
 		044877241F2FF2DA00F6E712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044877221F2FF2DA00F6E712 /* LaunchScreen.storyboard */; };
 		044877301F2FF55500F6E712 /* GanttChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448772E1F2FF55500F6E712 /* GanttChartViewController.m */; };
 		044877311F2FF55500F6E712 /* GanttChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0448772F1F2FF55500F6E712 /* GanttChartViewController.xib */; };
+		D061D7FC4D9464CC19D1B71B /* libPods-DemoApplication.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2714EB5FB8A4BD44EBF32C13 /* libPods-DemoApplication.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D061D7FC4D9464CC19D1B71B /* libPods-DemoApplication.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +219,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DemoApplication/Pods-DemoApplication-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/OTGanttChartKit/OTGanttChartKit.bundle,
+				"$PODS_CONFIGURATION_BUILD_DIR/OTGanttChartKit/OTGanttChartKit.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
