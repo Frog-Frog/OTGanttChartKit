@@ -1,35 +1,42 @@
 # OTGanttChartKit
+====
 
-OTGanttChartKit is gantt chart framework for iOS. 
-This framework use easily like UITableView.
+OTGanttChartKit is gantt chart framework for iOS. This framework use easily like UITableView.
 
 ## Description
 
-OTGanttChartKit has advanced functions in adjust colors and sizes.
-You can customize gantt chart according to the needs of your App.
+OTGanttChartKit has color and size adjust functions.
+You can show your original gantt chart.
 
-***Demo***
+## Demo
 To be prepared.
 Coming soon...
 
-## Requirement
-Xcode8.0
-iOS >= 8.0
-
-
 ## Usage
 ```objectivec:Objective-C
-OTGanttChartView *ganttChartView = [[OTGanttChartView alloc]initWithFrame:self.view.bounds];
+
+OTGanttChartView *ganttChartView = [[OTGanttChartView alloc]initWithFrame:self.yourView.bounds];
 
 ganttChartView.dataSource = self;
 ganttChartView.delegate = self;
 
-[self.view addSubview:ganttChartView];
+// If you want to make original gantt chart, you can customize here.
+
+[self.yourView addSubView:ganttChartView];
+
 ```
 
 ## Install
 
-To be prepared Cocoapods and Carthage.
+###CocoaPods
+Add this to your Podfile.
+
+```PodFile
+pod 'OTGanttChartKit'
+```
+
+###Carthage
+To be prepared.
 Coming soon...
 
 ## Licence
