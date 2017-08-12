@@ -21,9 +21,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		04A425771F336267006AF9EB /* OTGanttChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A425531F336267006AF9EB /* OTGanttChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04A425781F336267006AF9EB /* OTGanttChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A425541F336267006AF9EB /* OTGanttChartView.m */; };
-		04A425791F336267006AF9EB /* OTGanttChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A425551F336267006AF9EB /* OTGanttChartView.xib */; };
+		042C1A4E1F3E9B3600F1CB0C /* OTGanttChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 042C1A4B1F3E9B3600F1CB0C /* OTGanttChartView.h */; };
+		042C1A4F1F3E9B3600F1CB0C /* OTGanttChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 042C1A4C1F3E9B3600F1CB0C /* OTGanttChartView.m */; };
+		042C1A501F3E9B3700F1CB0C /* OTGanttChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042C1A4D1F3E9B3600F1CB0C /* OTGanttChartView.xib */; };
 		04A4257A1F336267006AF9EB /* OTGanttChartViewImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A425561F336267006AF9EB /* OTGanttChartViewImage.xcassets */; };
 		04A4257B1F336267006AF9EB /* OTGChartPointView.h in Headers */ = {isa = PBXBuildFile; fileRef = 04A425581F336267006AF9EB /* OTGChartPointView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04A4257C1F336267006AF9EB /* OTGChartPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A425591F336267006AF9EB /* OTGChartPointView.m */; };
@@ -63,9 +63,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		04A425531F336267006AF9EB /* OTGanttChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTGanttChartView.h; sourceTree = "<group>"; };
-		04A425541F336267006AF9EB /* OTGanttChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTGanttChartView.m; sourceTree = "<group>"; };
-		04A425551F336267006AF9EB /* OTGanttChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OTGanttChartView.xib; sourceTree = "<group>"; };
+		042C1A4B1F3E9B3600F1CB0C /* OTGanttChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OTGanttChartView.h; path = OTGanttChartView/OTGanttChartView.h; sourceTree = "<group>"; };
+		042C1A4C1F3E9B3600F1CB0C /* OTGanttChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OTGanttChartView.m; path = OTGanttChartView/OTGanttChartView.m; sourceTree = "<group>"; };
+		042C1A4D1F3E9B3600F1CB0C /* OTGanttChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OTGanttChartView.xib; path = OTGanttChartView/OTGanttChartView.xib; sourceTree = "<group>"; };
 		04A425561F336267006AF9EB /* OTGanttChartViewImage.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = OTGanttChartViewImage.xcassets; sourceTree = "<group>"; };
 		04A425581F336267006AF9EB /* OTGChartPointView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTGChartPointView.h; sourceTree = "<group>"; };
 		04A425591F336267006AF9EB /* OTGChartPointView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTGChartPointView.m; sourceTree = "<group>"; };
@@ -116,17 +116,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042C1A4A1F3E9B1D00F1CB0C /* OTGanttChartView */ = {
+			isa = PBXGroup;
+			children = (
+				042C1A4B1F3E9B3600F1CB0C /* OTGanttChartView.h */,
+				042C1A4C1F3E9B3600F1CB0C /* OTGanttChartView.m */,
+				042C1A4D1F3E9B3600F1CB0C /* OTGanttChartView.xib */,
+			);
+			name = OTGanttChartView;
+			sourceTree = "<group>";
+		};
 		04A425521F336267006AF9EB /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				04A425701F336267006AF9EB /* OTGCommonClass */,
-				04A425531F336267006AF9EB /* OTGanttChartView.h */,
-				04A425541F336267006AF9EB /* OTGanttChartView.m */,
-				04A425551F336267006AF9EB /* OTGanttChartView.xib */,
 				04A425561F336267006AF9EB /* OTGanttChartViewImage.xcassets */,
+				042C1A4A1F3E9B1D00F1CB0C /* OTGanttChartView */,
+				04A4255D1F336267006AF9EB /* OTGChartView */,
 				04A425571F336267006AF9EB /* OTGChartPointView */,
 				04A4255A1F336267006AF9EB /* OTGChartProcessView */,
-				04A4255D1F336267006AF9EB /* OTGChartView */,
 			);
 			name = Source;
 			path = ../../Source;
@@ -276,12 +284,12 @@
 			files = (
 				04A4257B1F336267006AF9EB /* OTGChartPointView.h in Headers */,
 				04A4257D1F336267006AF9EB /* OTGChartProcessView.h in Headers */,
-				04A425771F336267006AF9EB /* OTGanttChartView.h in Headers */,
 				04A4258C1F336267006AF9EB /* OTGanttChartConstant.h in Headers */,
 				04A4258E1F336267006AF9EB /* OTGCommonClass.h in Headers */,
 				04A425821F336267006AF9EB /* OTGDateView.h in Headers */,
 				04A4257F1F336267006AF9EB /* OTGChartView.h in Headers */,
 				04B2A6731F320DCF0050C0FF /* OTGanttChartKit.h in Headers */,
+				042C1A4E1F3E9B3600F1CB0C /* OTGanttChartView.h in Headers */,
 				04A4258A1F336267006AF9EB /* OTGChartSectionView.h in Headers */,
 				04A425861F336267006AF9EB /* OTGChartViewCell.h in Headers */,
 				04A425901F336267006AF9EB /* OTGDrawingCommonClass.h in Headers */,
@@ -377,8 +385,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042C1A501F3E9B3700F1CB0C /* OTGanttChartView.xib in Resources */,
 				04A425811F336267006AF9EB /* OTGChartView.xib in Resources */,
-				04A425791F336267006AF9EB /* OTGanttChartView.xib in Resources */,
 				04A4257A1F336267006AF9EB /* OTGanttChartViewImage.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,11 +426,11 @@
 				04A425831F336267006AF9EB /* OTGDateView.m in Sources */,
 				04A425801F336267006AF9EB /* OTGChartView.m in Sources */,
 				04A425891F336267006AF9EB /* OTGChartDrawView.m in Sources */,
-				04A425781F336267006AF9EB /* OTGanttChartView.m in Sources */,
 				04A425851F336267006AF9EB /* OTGTodayFigureView.m in Sources */,
 				04A4257E1F336267006AF9EB /* OTGChartProcessView.m in Sources */,
 				04A4258B1F336267006AF9EB /* OTGChartSectionView.m in Sources */,
 				04A425871F336267006AF9EB /* OTGChartViewCell.m in Sources */,
+				042C1A4F1F3E9B3600F1CB0C /* OTGanttChartView.m in Sources */,
 				04A4257C1F336267006AF9EB /* OTGChartPointView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
