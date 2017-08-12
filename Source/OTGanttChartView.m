@@ -1094,10 +1094,9 @@
 
 
 - (void)setHorizontalContentOffsetFromDate:(NSDate *)date
+                                atPosition:(OTGHorizontalScrollPosition)position
                                   animated:(BOOL)animated
 {
-    [self layoutIfNeeded];
-    
     if (!date) {
         [self.ganttScrollView setContentOffset:CGPointZero animated:animated];
         return;
@@ -1112,15 +1111,63 @@
     }
     
     //指定された日付がチャートの中央に来るように位置を指定する
-    CGFloat xPoint = sameIndex * self.dateWidth - self.ganttScrollView.frame.size.width/2 + self.dateWidth/2;
+    CGFloat xPoint = 0;
+    
+    switch (position) {
+        case OTGHorizontalScrollPositionLeft:
+        {
+            xPoint = sameIndex * self.dateWidth;
+            break;
+        }
+        case OTGHorizontalScrollPositionCenter:
+        {
+            xPoint = sameIndex * self.dateWidth - self.ganttScrollView.frame.size.width/2 + self.dateWidth/2;
+            break;
+        }
+        case OTGHorizontalScrollPositionRight:
+        {
+            xPoint = sameIndex * self.dateWidth - self.ganttScrollView.frame.size.width + self.dateWidth;
+            break;
+        }
+        case OTGHorizontalScrollPositionAutomatic:
+        {
+            NSInteger leftIndex = [self getDateIndexFromXpoint:self.ganttScrollView.contentOffset.x];
+            NSInteger centerIndex = [self getDateIndexFromXpoint:self.ganttScrollView.contentOffset.x + self.ganttScrollView.frame.size.width/2];
+            NSInteger rightIndex = [self getDateIndexFromXpoint:self.ganttScrollView.contentOffset.x + self.ganttScrollView.frame.size.width];
+            
+            NSInteger leftDifference = labs(leftIndex - sameIndex);
+            NSInteger centerDifference = labs(centerIndex - sameIndex);
+            NSInteger rightDifference = labs(rightIndex - sameIndex);
+            
+            NSArray *numArray = @[@(leftDifference),@(centerDifference),@(rightDifference)];
+            NSExpression *minExpression = [NSExpression expressionForFunction:@"min:" arguments:@[[NSExpression expressionForConstantValue:numArray]]];
+            NSInteger minimumValue = [[minExpression expressionValueWithObject:nil context:nil] integerValue];
+            
+            if (minimumValue == leftDifference) {
+                xPoint = sameIndex * self.dateWidth;
+            } else if (minimumValue == centerDifference) {
+                xPoint = sameIndex * self.dateWidth - self.ganttScrollView.frame.size.width/2 + self.dateWidth/2;
+            } else if (minimumValue == rightDifference) {
+                xPoint = sameIndex * self.dateWidth - self.ganttScrollView.frame.size.width + self.dateWidth;
+            }
+            
+            break;
+        }
+        case OTGHorizontalScrollPositionNone:
+        {
+            break;
+        }
+        default:
+        {
+            break;
+        }
+    }
     
     if (xPoint < 0) {
-        //日付を中央に持って行った時に左側に空白ができてしまう場合は0に固定する
         xPoint = 0;
     }
     
     if (self.chartView.frame.size.width - xPoint < self.ganttScrollView.frame.size.width) {
-        //日付を中央に持って行った時に右側に空白ができてしまう場合は右端に固定する
         xPoint = self.ganttScrollView.contentSize.width - self.ganttScrollView.frame.size.width;
     }
     
@@ -1181,12 +1228,23 @@
 
 
 #pragma mark - Get date on GanttChart
-- (NSDate *)getDateFromXpoint:(CGFloat)x
+- (NSInteger)getDateIndexFromXpoint:(CGFloat)x
 {
     NSInteger index = ceil(x/self.dateWidth);
     
-    
     if (index < self.showDateArray.count) {
+        return index;
+    }
+    
+    return NSNotFound;
+}
+
+
+- (NSDate *)getDateFromXpoint:(CGFloat)x
+{
+    NSInteger index = [self getDateIndexFromXpoint:x];
+    
+    if (index != NSNotFound) {
         NSDate *date = self.showDateArray[index];
         
         return date;

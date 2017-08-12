@@ -21,6 +21,15 @@
 
 #import "OTGCommonClass.h"
 
+typedef NS_ENUM(NSInteger,OTGHorizontalScrollPosition)
+{
+    OTGHorizontalScrollPositionLeft,
+    OTGHorizontalScrollPositionCenter,
+    OTGHorizontalScrollPositionRight,
+    OTGHorizontalScrollPositionAutomatic,
+    OTGHorizontalScrollPositionNone
+};
+
 @class OTGanttChartView,OTGChartProcessView,OTGChartPointView;
 
 @protocol OTGanttChartViewDataSource<NSObject>
@@ -153,7 +162,7 @@
 - (void)reloadSections:(NSIndexSet *)indexSet withRowAnimation:(UITableViewRowAnimation)animation;
 
 // If argument date were not showing, set contentOffset CGpointZero.
-- (void)setHorizontalContentOffsetFromDate:(NSDate *)date animated:(BOOL)animated;
+- (void)setHorizontalContentOffsetFromDate:(NSDate *)date atPosition:(OTGHorizontalScrollPosition)position animated:(BOOL)animated;
 
 
 - (void)setHorizontalContentOffset:(CGPoint)offset;
