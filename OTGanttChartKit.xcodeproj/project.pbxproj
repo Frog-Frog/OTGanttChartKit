@@ -34,7 +34,7 @@
 		044C7E311F3ECAA7003A53C1 /* OTGDrawingCommonClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 044C7E171F3ECAA7003A53C1 /* OTGDrawingCommonClass.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		044C7E321F3ECAA7003A53C1 /* OTGDrawingCommonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C7E181F3ECAA7003A53C1 /* OTGDrawingCommonClass.m */; };
 		044C7E361F3ED2EC003A53C1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 044C7E341F3ED2EC003A53C1 /* Info.plist */; };
-		044C7E371F3ED2EC003A53C1 /* OTGanttChartKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 044C7E351F3ED2EC003A53C1 /* OTGanttChartKit.h */; };
+		044C7E371F3ED2EC003A53C1 /* OTGanttChartKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 044C7E351F3ED2EC003A53C1 /* OTGanttChartKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
