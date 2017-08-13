@@ -20,6 +20,9 @@ DerivedData
 Pods/*
 Podfile.lock
 
+# Carthage
+Carthage/Build
+
 # others
 *.swp
 !.gitkeep
