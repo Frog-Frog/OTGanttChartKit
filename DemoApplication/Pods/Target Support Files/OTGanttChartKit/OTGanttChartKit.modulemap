@@ -1,0 +1,6 @@
+framework module OTGanttChartKit {
+  umbrella header "OTGanttChartKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

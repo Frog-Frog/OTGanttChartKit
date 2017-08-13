@@ -7,284 +7,216 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09B321339F2804D3AB7D2D420549279D /* OTGanttChartKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 75DFE308A61D64422D6DCF7CFD7E3765 /* OTGanttChartKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A0790C754C1F508AB3B521F7F9FE189 /* OTGChartSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 726F92B03ECB6F7C04A9301FAB9E478D /* OTGChartSectionView.m */; };
-		10D57F83B88EDD19D89BB57A160F785E /* OTGCommonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = DE51450D8506A15A902D35B7AC1BBEA2 /* OTGCommonClass.m */; };
-		2547E4D555C13540140BCAB7D5B5C0DD /* OTGChartDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = F96EB4D3F60108770AE1249F6F1881E9 /* OTGChartDrawView.m */; };
-		2591669B09BC5BBBE8CB271652F730AC /* OTGDateView.h in Headers */ = {isa = PBXBuildFile; fileRef = 47FE464981B0A626EEDB474A4B2BCE8B /* OTGDateView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2DB6A5C395CC65D7CDAC460C6F5B2B02 /* OTGanttChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 115432A1DDB6C3A8B74F204CAFA01823 /* OTGanttChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2F58E2D603A83ED6B89595D414AB2F0E /* OTGChartViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B41EAF161E855DBCDA4D5A7F6D2BD2C /* OTGChartViewCell.m */; };
-		321160F8D15734AB6FE568506CF16673 /* OTGChartPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BB326F2D0B8E595B4C3231F81EEA38 /* OTGChartPointView.m */; };
-		32F9B7A110E3264CC5C75986DDF4A324 /* OTGanttChartKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A9F3BF050FBF0E2E3597BBB41DA5F133 /* OTGanttChartKit-dummy.m */; };
-		4136EF064942B87DA831C82C84612622 /* OTGChartProcessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8538B415711E388F473108DA7EA53 /* OTGChartProcessView.m */; };
-		469FB0B759FEA97756178FA727377B7F /* Pods-DemoApplication-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DFD984FCB41E12FB5E29813AD1C5F06C /* Pods-DemoApplication-dummy.m */; };
-		5F2325CCAB498C1EC3C8076B2EDBF862 /* OTGChartDrawView.h in Headers */ = {isa = PBXBuildFile; fileRef = 65D522D25D7CDE650F695E3DC006B2F0 /* OTGChartDrawView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6F8BA00BA00B3E4D7C23C6FAC3891087 /* OTGanttChartViewImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68B7ED0A154A93C595828455039914E6 /* OTGanttChartViewImage.xcassets */; };
-		7451989107C468618CECD9E48F0B4915 /* OTGChartSectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = B69AD4DC28FD1320308CB512BF460CD9 /* OTGChartSectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7997494B0B57C722C8A5FD128BFAB806 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		893368DB3388F2C370B2B7E20AE2A44D /* OTGDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DC5696C144C35119E749B5BC2C8BFFB /* OTGDateView.m */; };
-		93B1FAE7F90F75FA64A2A08E61BC52D9 /* OTGChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BFA0914B9545167DADA4AF241C3B055 /* OTGChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9465A344497CD473FEE4451CBD4C5148 /* OTGDrawingCommonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 40FDF800A7259B7CCF983D8BA5E6B391 /* OTGDrawingCommonClass.m */; };
-		9F2991F2B8AAE7736FE88E7A1140EEEA /* OTGChartViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4EC89145410DF6B5AF37B71CFF05433B /* OTGChartViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AB3D7D9657CDFDB67AE33CAC8610D7F1 /* OTGanttChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B29C40CDEA43373B005F3A5F8E202CC6 /* OTGanttChartView.xib */; };
-		AEBEBC08D3591FF832BD5FAA6D46C029 /* OTGCommonClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 87993CB641B58AD8D9D7148D29B9F4B2 /* OTGCommonClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4B9A2DA83C69FEA258538BE589B2DA9 /* OTGTodayFigureView.h in Headers */ = {isa = PBXBuildFile; fileRef = A36023A4C15AB53263E7013FAA802078 /* OTGTodayFigureView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B6634ADC1F9DE20E477BE05395F3167D /* OTGChartProcessView.h in Headers */ = {isa = PBXBuildFile; fileRef = F11EFF09AB987DEF621CFFDDD5D5BA83 /* OTGChartProcessView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B73F318ABA72727977AF5A213D6C93B2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		B7C0AACF0A5B9B27102B88A48C0FF322 /* OTGanttChartConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = D3D5C6E812A22B8F87B6AA324B949EAE /* OTGanttChartConstant.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BBCCCA721BC0D033552F399AC469E5B0 /* OTGChartPointView.h in Headers */ = {isa = PBXBuildFile; fileRef = 341D96E2E6CD61288B1668075B996B23 /* OTGChartPointView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CCBCAA4F10A0F4CECEFE4F9442F10A95 /* OTGChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5560AFEF591FCB1151C14445FD5CDE59 /* OTGChartView.xib */; };
-		DACB1F0DD8F0E21673CFC19C28A226A4 /* OTGTodayFigureView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1B271FEC0E7ADD0B32171EAC75736E6 /* OTGTodayFigureView.m */; };
-		E2AEA5DFBCA753FF7053BFA23FECA54D /* OTGChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2CFCEEA8C73EB8B86FC330463A97C9 /* OTGChartView.m */; };
-		F3A292CCAE665EF58AC0CC8AA7101742 /* OTGDrawingCommonClass.h in Headers */ = {isa = PBXBuildFile; fileRef = CC537F406ABDE6408679DEB412F9CDE5 /* OTGDrawingCommonClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAC59D45BB1B44F5161720931423E664 /* OTGanttChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 69B67DBB9EB4484232ED976323F84E25 /* OTGanttChartView.m */; };
+		08664D2FA0EBC6CF744DE92943E9694A /* OTGChartSectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = BEA08EF110F96CB8C9E1FCAF8056E076 /* OTGChartSectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31DA8DE5075786F22EB600DA37F6878A /* OTGanttChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ACEF376895B5F76B6DE6193E01F7062 /* OTGanttChartView.m */; };
+		36D9CF5705D34D05945CE8FC6CA692DC /* OTGanttChartViewImage.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9ADB9310D84A6F1B7B20BED914194B25 /* OTGanttChartViewImage.xcassets */; };
+		415473C8278DE65D4A6895CA305DEC6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		4736019D6DC655FD7C43721C9825B31A /* OTGTodayFigureView.h in Headers */ = {isa = PBXBuildFile; fileRef = 11C50B4685B5E522E263DEB4A98D52A8 /* OTGTodayFigureView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		591255F99336A7EF0D05406304C42B37 /* OTGChartDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F3659C6A0267B67986FA962EE1956EB /* OTGChartDrawView.m */; };
+		591DC823E5190EFFE5A6781D8ADF793D /* OTGanttChartKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 1057422813F5AA7DECDA42BB4EFBAE51 /* OTGanttChartKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5BB2F2E229F7E29D3E3FD3384C696472 /* OTGCommonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DD32A3A63373D9F61F04F89910C6A2A /* OTGCommonClass.m */; };
+		5C16A61268531CD0226FDD2C6F3A2620 /* OTGChartPointView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55F7D54EA30CACDA5597F83AC0893A9C /* OTGChartPointView.m */; };
+		5CAAEB7F72C9E3F990E594A551980C9D /* OTGChartSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B0A33EE73BF99C7F9914EE831A5E39C3 /* OTGChartSectionView.m */; };
+		5D450C950C0FDA70B67C795E3E579D12 /* OTGDrawingCommonClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CE6F21CD49FED72B7C7D104B597640E /* OTGDrawingCommonClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		602F30973DDEDF6E3C340AF4B8B7B45E /* OTGChartDrawView.h in Headers */ = {isa = PBXBuildFile; fileRef = 645942AFDC28232AE252202F382C2D77 /* OTGChartDrawView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		63DBE6E8F092FE26840811159B40AA0A /* OTGTodayFigureView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02CFF3BEA86C85A282365F48DD0AE4E9 /* OTGTodayFigureView.m */; };
+		67EB91F7A9AB2780FBB766799BAD3B12 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		69DDD08C9493302236ABC662ABA98BC3 /* OTGChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6CDFBF1F1F14F5D42FEDD5706AC89B6 /* OTGChartView.m */; };
+		6B29B0EEE802EDC14CA90511E2A07182 /* OTGanttChartConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 079D2FFDB63AB0C65411C34C11B2C19F /* OTGanttChartConstant.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		72810C6DCB9C441E741DB1CCB8ACE138 /* OTGCommonClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 85F4BB78D76EE99C452EE31555AF0E63 /* OTGCommonClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87B7441FDA562D6A918E98247D967CBB /* OTGanttChartKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F93A94EF6B2043F421DEF934D3411A3 /* OTGanttChartKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A8AC326AEFC67444E53A78F109A0E6F /* OTGChartPointView.h in Headers */ = {isa = PBXBuildFile; fileRef = B0FBF7FC918F74A2AA600C0D8CD4026F /* OTGChartPointView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8ACF0D8EE086392A50F7CF1589E09EE6 /* OTGChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A6D7255AC2996BEC366F3878E0B2463 /* OTGChartView.xib */; };
+		98831570DC59092B0429DA4551A20847 /* OTGChartProcessView.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E6DA933920EFD63BB73D5EC0DF8ADF /* OTGChartProcessView.m */; };
+		A5B8CE20792FDA4BFCDB1D62D335000D /* OTGanttChartKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8B063B6CD95718F0B2B79CD520AEF20F /* OTGanttChartKit.bundle */; };
+		A656A2941028BCF2365A58C5ACA807F2 /* OTGChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 081432F55CC08C0E3EF3EBCED4CA2B16 /* OTGChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6C2241098983ED20F1AA813430B6AD1 /* OTGDateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FBF026A3657123D7ACD2CD6A5F4D46 /* OTGDateView.m */; };
+		A95ABF1D85B9E20F0B0AA7C5FF8EA528 /* OTGanttChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8623CD8184DC0C23F14F885E1642A6E6 /* OTGanttChartView.xib */; };
+		ABAAA0C3E6DCAB55A98F6D50A7EE14F1 /* OTGDateView.h in Headers */ = {isa = PBXBuildFile; fileRef = 33F093B6DE981CDAB1154E6D580219C1 /* OTGDateView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0077DB378DFCADCD983B4CC19BAEABA /* OTGChartProcessView.h in Headers */ = {isa = PBXBuildFile; fileRef = FAC5FA3E8F8D1AE01141F222773928E1 /* OTGChartProcessView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0D7BE3D9A5E3DD0E2962E04F951CECC /* OTGanttChartKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0B301EDBA4999AB9E9A69F71931CD1 /* OTGanttChartKit-dummy.m */; };
+		C0A1494C41DCB40DB5F95360A6A61954 /* OTGanttChartView.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C83CAC992959F88D865649D7C4A892B /* OTGanttChartView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3D11552109CFA6929A42486D6E17314 /* OTGChartViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F22051A081F2F4F4FA9B603832B51673 /* OTGChartViewCell.m */; };
+		D9E99970A6A3B0051AA25FEA9C6B68F8 /* Pods-DemoApplication-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 067D1B1A7E94F0330962B4DEF7C0B48E /* Pods-DemoApplication-dummy.m */; };
+		E94B2A3FFB089FBDFEA5C9F02769D00D /* Pods-DemoApplication-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 571010B8439895EC1C616B04F84AD5E0 /* Pods-DemoApplication-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED40AA5DE402BBDDD6F37D4572F21B37 /* OTGDrawingCommonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 69CAA11D29275B9341A267DF5655EF84 /* OTGDrawingCommonClass.m */; };
+		F12907B9DDE6C64F95608E8D7405BB11 /* OTGChartViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EA1F7DDB7B3CD661C1679747A20ADB9 /* OTGChartViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		76E508A68A5654D2184E1E6EBD51A930 /* PBXContainerItemProxy */ = {
+		AA5EA64D8D84D1AC4084AD4876A36F8A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 79F5A7D31998FA2A0CD513918CF9C07C;
+			remoteGlobalIDString = CB1251BFCEF3A808B5F0F4F631428FB7;
 			remoteInfo = OTGanttChartKit;
 		};
-		BF6ED96E0BEFC9E34D1FD7A47EC5C05B /* PBXContainerItemProxy */ = {
+		D1718CC5504655A9F5C2FF194C57D10D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 234425C3FB2920B554AEF6B00C62375C;
+			remoteGlobalIDString = CC1BCE8FBB17CA8BB12F63583C8ACE4C;
 			remoteInfo = "OTGanttChartKit-OTGanttChartKit";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		051935CF6B60FE0230342D94F7A1009A /* Pods-DemoApplication-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DemoApplication-acknowledgements.plist"; sourceTree = "<group>"; };
-		06AE6B48D717E8E5C73F9F415C30E4A2 /* Pods-DemoApplication-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DemoApplication-resources.sh"; sourceTree = "<group>"; };
-		0B41EAF161E855DBCDA4D5A7F6D2BD2C /* OTGChartViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OTGChartViewCell.m; sourceTree = "<group>"; };
-		115432A1DDB6C3A8B74F204CAFA01823 /* OTGanttChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OTGanttChartView.h; sourceTree = "<group>"; };
-		1ED7198FB54A4277D8115FB2160E9B54 /* Pods-DemoApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DemoApplication.release.xcconfig"; sourceTree = "<group>"; };
-		333C42DE13974E07563ED1EA1B6D6291 /* OTGanttChartKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OTGanttChartKit-prefix.pch"; sourceTree = "<group>"; };
-		341D96E2E6CD61288B1668075B996B23 /* OTGChartPointView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OTGChartPointView.h; sourceTree = "<group>"; };
-		40FDF800A7259B7CCF983D8BA5E6B391 /* OTGDrawingCommonClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OTGDrawingCommonClass.m; sourceTree = "<group>"; };
-		47FE464981B0A626EEDB474A4B2BCE8B /* OTGDateView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OTGDateView.h; sourceTree = "<group>"; };
-		4CA3DC4428FAFF06056E65DE3CD37DE5 /* Pods-DemoApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DemoApplication.debug.xcconfig"; sourceTree = "<group>"; };
-		4EC89145410DF6B5AF37B71CFF05433B /* OTGChartViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OTGChartViewCell.h; sourceTree = "<group>"; };
-		52BB326F2D0B8E595B4C3231F81EEA38 /* OTGChartPointView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OTGChartPointView.m; sourceTree = "<group>"; };
-		555EC08F2A80C8A6BE240DC9CDE9B6A5 /* ResourceBundle-OTGanttChartKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-OTGanttChartKit-Info.plist"; sourceTree = "<group>"; };
-		5560AFEF591FCB1151C14445FD5CDE59 /* OTGChartView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OTGChartView.xib; sourceTree = "<group>"; };
-		5C69F510E1BE893CB43968E705703490 /* libPods-DemoApplication.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-DemoApplication.a"; path = "libPods-DemoApplication.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F2E7C780EE1AD96001F1E4264E567C1 /* libOTGanttChartKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libOTGanttChartKit.a; path = libOTGanttChartKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		65D522D25D7CDE650F695E3DC006B2F0 /* OTGChartDrawView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OTGChartDrawView.h; sourceTree = "<group>"; };
+		02CFF3BEA86C85A282365F48DD0AE4E9 /* OTGTodayFigureView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OTGTodayFigureView.m; path = Classes/OTGChartView/OTGDateView/OTGTodayFigureView.m; sourceTree = "<group>"; };
+		067D1B1A7E94F0330962B4DEF7C0B48E /* Pods-DemoApplication-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DemoApplication-dummy.m"; sourceTree = "<group>"; };
+		079D2FFDB63AB0C65411C34C11B2C19F /* OTGanttChartConstant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTGanttChartConstant.h; path = Classes/OTGCommonClass/OTGanttChartConstant.h; sourceTree = "<group>"; };
+		07FBF026A3657123D7ACD2CD6A5F4D46 /* OTGDateView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OTGDateView.m; path = Classes/OTGChartView/OTGDateView/OTGDateView.m; sourceTree = "<group>"; };
+		08100DCB2CB01A14E87C553750AA662B /* Pods_DemoApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_DemoApplication.framework; path = "Pods-DemoApplication.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		081432F55CC08C0E3EF3EBCED4CA2B16 /* OTGChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTGChartView.h; path = Classes/OTGChartView/OTGChartView.h; sourceTree = "<group>"; };
+		0ACEF376895B5F76B6DE6193E01F7062 /* OTGanttChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OTGanttChartView.m; path = Classes/OTGanttChartView/OTGanttChartView.m; sourceTree = "<group>"; };
+		1057422813F5AA7DECDA42BB4EFBAE51 /* OTGanttChartKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTGanttChartKit.h; path = "Classes/Supporting Files/OTGanttChartKit.h"; sourceTree = "<group>"; };
+		11C50B4685B5E522E263DEB4A98D52A8 /* OTGTodayFigureView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTGTodayFigureView.h; path = Classes/OTGChartView/OTGDateView/OTGTodayFigureView.h; sourceTree = "<group>"; };
+		29440CC43A6CFD612177C1DED3ACAEF0 /* Pods-DemoApplication-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DemoApplication-resources.sh"; sourceTree = "<group>"; };
+		31A3D9ECA9302D1A2BB22AA44759DFF3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		33F093B6DE981CDAB1154E6D580219C1 /* OTGDateView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTGDateView.h; path = Classes/OTGChartView/OTGDateView/OTGDateView.h; sourceTree = "<group>"; };
+		3A6D7255AC2996BEC366F3878E0B2463 /* OTGChartView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = OTGChartView.xib; path = Classes/OTGChartView/OTGChartView.xib; sourceTree = "<group>"; };
+		3AC3013CD7E828E8DEF8CE1C0CFD5088 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F3659C6A0267B67986FA962EE1956EB /* OTGChartDrawView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OTGChartDrawView.m; path = Classes/OTGChartView/TableView/OTGChartDrawView/OTGChartDrawView.m; sourceTree = "<group>"; };
+		4CE6F21CD49FED72B7C7D104B597640E /* OTGDrawingCommonClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTGDrawingCommonClass.h; path = Classes/OTGCommonClass/OTGDrawingCommonClass.h; sourceTree = "<group>"; };
+		55F7D54EA30CACDA5597F83AC0893A9C /* OTGChartPointView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OTGChartPointView.m; path = Classes/OTGChartPointView/OTGChartPointView.m; sourceTree = "<group>"; };
+		571010B8439895EC1C616B04F84AD5E0 /* Pods-DemoApplication-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-DemoApplication-umbrella.h"; sourceTree = "<group>"; };
+		5E91AB983349F9775D63A240E1FDD546 /* Pods-DemoApplication-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DemoApplication-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5EA1F7DDB7B3CD661C1679747A20ADB9 /* OTGChartViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTGChartViewCell.h; path = Classes/OTGChartView/TableView/Cell/OTGChartViewCell.h; sourceTree = "<group>"; };
+		5FB1830896585F245FDEFFDBF7E974EA /* Pods-DemoApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DemoApplication.release.xcconfig"; sourceTree = "<group>"; };
+		645942AFDC28232AE252202F382C2D77 /* OTGChartDrawView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTGChartDrawView.h; path = Classes/OTGChartView/TableView/OTGChartDrawView/OTGChartDrawView.h; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		68B7ED0A154A93C595828455039914E6 /* OTGanttChartViewImage.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = OTGanttChartViewImage.xcassets; path = Classes/OTGanttChartViewImage.xcassets; sourceTree = "<group>"; };
-		69B67DBB9EB4484232ED976323F84E25 /* OTGanttChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OTGanttChartView.m; sourceTree = "<group>"; };
-		726F92B03ECB6F7C04A9301FAB9E478D /* OTGChartSectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OTGChartSectionView.m; sourceTree = "<group>"; };
-		75DFE308A61D64422D6DCF7CFD7E3765 /* OTGanttChartKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OTGanttChartKit.h; sourceTree = "<group>"; };
-		790A5216DA8F9C4DB6CA8DEE29E850DF /* OTGanttChartKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = OTGanttChartKit.bundle; path = OTGanttChartKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		81047BC4556EB4BBA3B93D95C1A197F1 /* Pods-DemoApplication-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DemoApplication-acknowledgements.markdown"; sourceTree = "<group>"; };
-		87993CB641B58AD8D9D7148D29B9F4B2 /* OTGCommonClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OTGCommonClass.h; sourceTree = "<group>"; };
-		8DC5696C144C35119E749B5BC2C8BFFB /* OTGDateView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OTGDateView.m; sourceTree = "<group>"; };
+		68B72D79DEB60D622070041E3C232358 /* Pods-DemoApplication-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DemoApplication-frameworks.sh"; sourceTree = "<group>"; };
+		69CAA11D29275B9341A267DF5655EF84 /* OTGDrawingCommonClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OTGDrawingCommonClass.m; path = Classes/OTGCommonClass/OTGDrawingCommonClass.m; sourceTree = "<group>"; };
+		6D0A3C4EB75C0FC4BDDD568B6F106F55 /* ResourceBundle-OTGanttChartKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-OTGanttChartKit-Info.plist"; sourceTree = "<group>"; };
+		6F93A94EF6B2043F421DEF934D3411A3 /* OTGanttChartKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OTGanttChartKit-umbrella.h"; sourceTree = "<group>"; };
+		7823F0FF746D6FF1AE591E56962E2409 /* OTGanttChartKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OTGanttChartKit.xcconfig; sourceTree = "<group>"; };
+		7C83CAC992959F88D865649D7C4A892B /* OTGanttChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTGanttChartView.h; path = Classes/OTGanttChartView/OTGanttChartView.h; sourceTree = "<group>"; };
+		85F4BB78D76EE99C452EE31555AF0E63 /* OTGCommonClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTGCommonClass.h; path = Classes/OTGCommonClass/OTGCommonClass.h; sourceTree = "<group>"; };
+		8623CD8184DC0C23F14F885E1642A6E6 /* OTGanttChartView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = OTGanttChartView.xib; path = Classes/OTGanttChartView/OTGanttChartView.xib; sourceTree = "<group>"; };
+		8B063B6CD95718F0B2B79CD520AEF20F /* OTGanttChartKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = OTGanttChartKit.bundle; path = OTGanttChartKit.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96AB51C85D920820D910ED21CE030A2F /* OTGanttChartKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OTGanttChartKit.xcconfig; sourceTree = "<group>"; };
-		9BFA0914B9545167DADA4AF241C3B055 /* OTGChartView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OTGChartView.h; sourceTree = "<group>"; };
-		9ED8538B415711E388F473108DA7EA53 /* OTGChartProcessView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OTGChartProcessView.m; sourceTree = "<group>"; };
-		A36023A4C15AB53263E7013FAA802078 /* OTGTodayFigureView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OTGTodayFigureView.h; sourceTree = "<group>"; };
-		A9F3BF050FBF0E2E3597BBB41DA5F133 /* OTGanttChartKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OTGanttChartKit-dummy.m"; sourceTree = "<group>"; };
-		AE2CFCEEA8C73EB8B86FC330463A97C9 /* OTGChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OTGChartView.m; sourceTree = "<group>"; };
-		B29C40CDEA43373B005F3A5F8E202CC6 /* OTGanttChartView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = OTGanttChartView.xib; sourceTree = "<group>"; };
-		B69AD4DC28FD1320308CB512BF460CD9 /* OTGChartSectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OTGChartSectionView.h; sourceTree = "<group>"; };
-		CC537F406ABDE6408679DEB412F9CDE5 /* OTGDrawingCommonClass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OTGDrawingCommonClass.h; sourceTree = "<group>"; };
-		D3D5C6E812A22B8F87B6AA324B949EAE /* OTGanttChartConstant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OTGanttChartConstant.h; sourceTree = "<group>"; };
-		DE51450D8506A15A902D35B7AC1BBEA2 /* OTGCommonClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OTGCommonClass.m; sourceTree = "<group>"; };
-		DFD984FCB41E12FB5E29813AD1C5F06C /* Pods-DemoApplication-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-DemoApplication-dummy.m"; sourceTree = "<group>"; };
-		F11EFF09AB987DEF621CFFDDD5D5BA83 /* OTGChartProcessView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = OTGChartProcessView.h; sourceTree = "<group>"; };
-		F1B271FEC0E7ADD0B32171EAC75736E6 /* OTGTodayFigureView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OTGTodayFigureView.m; sourceTree = "<group>"; };
-		F447A733074FE5D16C8FF219E486BDF0 /* Pods-DemoApplication-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-DemoApplication-frameworks.sh"; sourceTree = "<group>"; };
-		F96EB4D3F60108770AE1249F6F1881E9 /* OTGChartDrawView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = OTGChartDrawView.m; sourceTree = "<group>"; };
+		9ADB9310D84A6F1B7B20BED914194B25 /* OTGanttChartViewImage.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = OTGanttChartViewImage.xcassets; path = Classes/OTGanttChartViewImage.xcassets; sourceTree = "<group>"; };
+		9DD32A3A63373D9F61F04F89910C6A2A /* OTGCommonClass.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OTGCommonClass.m; path = Classes/OTGCommonClass/OTGCommonClass.m; sourceTree = "<group>"; };
+		B0A33EE73BF99C7F9914EE831A5E39C3 /* OTGChartSectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OTGChartSectionView.m; path = Classes/OTGChartView/TableView/Section/OTGChartSectionView.m; sourceTree = "<group>"; };
+		B0FBF7FC918F74A2AA600C0D8CD4026F /* OTGChartPointView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTGChartPointView.h; path = Classes/OTGChartPointView/OTGChartPointView.h; sourceTree = "<group>"; };
+		B47BBE572EEB6F392D30E918E6078096 /* OTGanttChartKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = OTGanttChartKit.modulemap; sourceTree = "<group>"; };
+		B6CDFBF1F1F14F5D42FEDD5706AC89B6 /* OTGChartView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OTGChartView.m; path = Classes/OTGChartView/OTGChartView.m; sourceTree = "<group>"; };
+		BEA08EF110F96CB8C9E1FCAF8056E076 /* OTGChartSectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTGChartSectionView.h; path = Classes/OTGChartView/TableView/Section/OTGChartSectionView.h; sourceTree = "<group>"; };
+		C1B757D20F2200F13B25349EE8075A02 /* OTGanttChartKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OTGanttChartKit-prefix.pch"; sourceTree = "<group>"; };
+		D53F3EFD6963BC5E069C6FCECFDA4475 /* Pods-DemoApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DemoApplication.debug.xcconfig"; sourceTree = "<group>"; };
+		D9346CA2E1C0A487A3EE5423D5BE97AD /* Pods-DemoApplication.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-DemoApplication.modulemap"; sourceTree = "<group>"; };
+		E9D5FED0CDDC1A3307E1FB3752AAE7C9 /* Pods-DemoApplication-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-DemoApplication-acknowledgements.plist"; sourceTree = "<group>"; };
+		EC0B301EDBA4999AB9E9A69F71931CD1 /* OTGanttChartKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OTGanttChartKit-dummy.m"; sourceTree = "<group>"; };
+		EF47EF40E1DAFEB8D815D826FC47782B /* OTGanttChartKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = OTGanttChartKit.framework; path = OTGanttChartKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1E6DA933920EFD63BB73D5EC0DF8ADF /* OTGChartProcessView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OTGChartProcessView.m; path = Classes/OTGChartProcessView/OTGChartProcessView.m; sourceTree = "<group>"; };
+		F22051A081F2F4F4FA9B603832B51673 /* OTGChartViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OTGChartViewCell.m; path = Classes/OTGChartView/TableView/Cell/OTGChartViewCell.m; sourceTree = "<group>"; };
+		FAC5FA3E8F8D1AE01141F222773928E1 /* OTGChartProcessView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OTGChartProcessView.h; path = Classes/OTGChartProcessView/OTGChartProcessView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1B15BF748F2D67015444E4779D987114 /* Frameworks */ = {
+		56F6D10792EA05BF348EF065EEA91EBD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B73F318ABA72727977AF5A213D6C93B2 /* Foundation.framework in Frameworks */,
+				415473C8278DE65D4A6895CA305DEC6E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7AAB1C8C8C6967F10F2083EFF3C131F /* Frameworks */ = {
+		DED8F1C07535FEBFDC69D1D48E470A98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E496EBBF4C8BFCC4184DF7578D62EB2C /* Frameworks */ = {
+		E7588C423CE6EA968415D037B70C82E2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7997494B0B57C722C8A5FD128BFAB806 /* Foundation.framework in Frameworks */,
+				67EB91F7A9AB2780FBB766799BAD3B12 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0646A0FA04DAC09A0D5EF7E4AB90BEBE /* Cell */ = {
+		16D70337312234239ECB9EB505DC64C0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4EC89145410DF6B5AF37B71CFF05433B /* OTGChartViewCell.h */,
-				0B41EAF161E855DBCDA4D5A7F6D2BD2C /* OTGChartViewCell.m */,
+				8B063B6CD95718F0B2B79CD520AEF20F /* OTGanttChartKit.bundle */,
+				EF47EF40E1DAFEB8D815D826FC47782B /* OTGanttChartKit.framework */,
+				08100DCB2CB01A14E87C553750AA662B /* Pods_DemoApplication.framework */,
 			);
-			name = Cell;
-			path = Cell;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		1B66953B5994C387E29634EDC76EE3E1 /* Support Files */ = {
+		2A7D6D9355CD4432B9BE879243E2C2A0 /* Pods-DemoApplication */ = {
 			isa = PBXGroup;
 			children = (
-				96AB51C85D920820D910ED21CE030A2F /* OTGanttChartKit.xcconfig */,
-				A9F3BF050FBF0E2E3597BBB41DA5F133 /* OTGanttChartKit-dummy.m */,
-				333C42DE13974E07563ED1EA1B6D6291 /* OTGanttChartKit-prefix.pch */,
-				555EC08F2A80C8A6BE240DC9CDE9B6A5 /* ResourceBundle-OTGanttChartKit-Info.plist */,
+				3AC3013CD7E828E8DEF8CE1C0CFD5088 /* Info.plist */,
+				D9346CA2E1C0A487A3EE5423D5BE97AD /* Pods-DemoApplication.modulemap */,
+				5E91AB983349F9775D63A240E1FDD546 /* Pods-DemoApplication-acknowledgements.markdown */,
+				E9D5FED0CDDC1A3307E1FB3752AAE7C9 /* Pods-DemoApplication-acknowledgements.plist */,
+				067D1B1A7E94F0330962B4DEF7C0B48E /* Pods-DemoApplication-dummy.m */,
+				68B72D79DEB60D622070041E3C232358 /* Pods-DemoApplication-frameworks.sh */,
+				29440CC43A6CFD612177C1DED3ACAEF0 /* Pods-DemoApplication-resources.sh */,
+				571010B8439895EC1C616B04F84AD5E0 /* Pods-DemoApplication-umbrella.h */,
+				D53F3EFD6963BC5E069C6FCECFDA4475 /* Pods-DemoApplication.debug.xcconfig */,
+				5FB1830896585F245FDEFFDBF7E974EA /* Pods-DemoApplication.release.xcconfig */,
 			);
-			name = "Support Files";
-			path = "DemoApplication/Pods/Target Support Files/OTGanttChartKit";
+			name = "Pods-DemoApplication";
+			path = "Target Support Files/Pods-DemoApplication";
 			sourceTree = "<group>";
 		};
-		2C796FD83DA118D1E5A3885332E97F14 /* Resources */ = {
+		510239242D4DD51369D146BB7B9FE4FA /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				68B7ED0A154A93C595828455039914E6 /* OTGanttChartViewImage.xcassets */,
-				CA4982A6BAF347B9B432451C3DDF170A /* OTGanttChartView */,
-				F68C92D648C72F8442B52C73F6D04A12 /* OTGChartView */,
+				2A7D6D9355CD4432B9BE879243E2C2A0 /* Pods-DemoApplication */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		5DC08AE59AE721D1681E590001889DE0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8623CD8184DC0C23F14F885E1642A6E6 /* OTGanttChartView.xib */,
+				9ADB9310D84A6F1B7B20BED914194B25 /* OTGanttChartViewImage.xcassets */,
+				3A6D7255AC2996BEC366F3878E0B2463 /* OTGChartView.xib */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		3BF0B212F1466C0FC42422CA4B5EE00B /* Supporting Files */ = {
+		765650D631D5B048AE99096BCBB91E68 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				75DFE308A61D64422D6DCF7CFD7E3765 /* OTGanttChartKit.h */,
+				31A3D9ECA9302D1A2BB22AA44759DFF3 /* Info.plist */,
+				B47BBE572EEB6F392D30E918E6078096 /* OTGanttChartKit.modulemap */,
+				7823F0FF746D6FF1AE591E56962E2409 /* OTGanttChartKit.xcconfig */,
+				EC0B301EDBA4999AB9E9A69F71931CD1 /* OTGanttChartKit-dummy.m */,
+				C1B757D20F2200F13B25349EE8075A02 /* OTGanttChartKit-prefix.pch */,
+				6F93A94EF6B2043F421DEF934D3411A3 /* OTGanttChartKit-umbrella.h */,
+				6D0A3C4EB75C0FC4BDDD568B6F106F55 /* ResourceBundle-OTGanttChartKit-Info.plist */,
 			);
-			name = "Supporting Files";
-			path = "Classes/Supporting Files";
-			sourceTree = "<group>";
-		};
-		3C691202F4F0DD1A1A18D50BC70A631C /* OTGanttChartView */ = {
-			isa = PBXGroup;
-			children = (
-				115432A1DDB6C3A8B74F204CAFA01823 /* OTGanttChartView.h */,
-				69B67DBB9EB4484232ED976323F84E25 /* OTGanttChartView.m */,
-			);
-			name = OTGanttChartView;
-			path = Classes/OTGanttChartView;
-			sourceTree = "<group>";
-		};
-		62A4A6143901FA05AB9D4652659A5B92 /* OTGChartDrawView */ = {
-			isa = PBXGroup;
-			children = (
-				65D522D25D7CDE650F695E3DC006B2F0 /* OTGChartDrawView.h */,
-				F96EB4D3F60108770AE1249F6F1881E9 /* OTGChartDrawView.m */,
-			);
-			name = OTGChartDrawView;
-			path = OTGChartDrawView;
-			sourceTree = "<group>";
-		};
-		74B65ABE21F873D10DA9B7C7C2FD159F /* OTGChartPointView */ = {
-			isa = PBXGroup;
-			children = (
-				341D96E2E6CD61288B1668075B996B23 /* OTGChartPointView.h */,
-				52BB326F2D0B8E595B4C3231F81EEA38 /* OTGChartPointView.m */,
-			);
-			name = OTGChartPointView;
-			path = Classes/OTGChartPointView;
-			sourceTree = "<group>";
-		};
-		79F57B8562B5D11BE31491B895F07855 /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				0646A0FA04DAC09A0D5EF7E4AB90BEBE /* Cell */,
-				62A4A6143901FA05AB9D4652659A5B92 /* OTGChartDrawView */,
-				CCB0841F77A4DBE0ADAD3921AE8785C6 /* Section */,
-			);
-			name = TableView;
-			path = TableView;
+			name = "Support Files";
+			path = "../Target Support Files/OTGanttChartKit";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				B1A143E49971CC427D81851239BDE170 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				BFC2A097C3C7223293AB72D61B64FD69 /* Products */,
-				F05EC599272850DDF85AB327D3DB6E98 /* Targets Support Files */,
+				91AA9B6A346E4D32C97FEB50DD837381 /* Pods */,
+				16D70337312234239ECB9EB505DC64C0 /* Products */,
+				510239242D4DD51369D146BB7B9FE4FA /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		945ABA7899E2EEA84C9D6F0F89F32688 /* OTGCommonClass */ = {
+		91AA9B6A346E4D32C97FEB50DD837381 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D3D5C6E812A22B8F87B6AA324B949EAE /* OTGanttChartConstant.h */,
-				87993CB641B58AD8D9D7148D29B9F4B2 /* OTGCommonClass.h */,
-				DE51450D8506A15A902D35B7AC1BBEA2 /* OTGCommonClass.m */,
-				CC537F406ABDE6408679DEB412F9CDE5 /* OTGDrawingCommonClass.h */,
-				40FDF800A7259B7CCF983D8BA5E6B391 /* OTGDrawingCommonClass.m */,
+				DF593BBECB2CB278F623A8120C02A12A /* OTGanttChartKit */,
 			);
-			name = OTGCommonClass;
-			path = Classes/OTGCommonClass;
-			sourceTree = "<group>";
-		};
-		999A582AC0019E6F0C2057CAEB30F7A9 /* OTGanttChartKit */ = {
-			isa = PBXGroup;
-			children = (
-				3C691202F4F0DD1A1A18D50BC70A631C /* OTGanttChartView */,
-				74B65ABE21F873D10DA9B7C7C2FD159F /* OTGChartPointView */,
-				D6C63FE3385087604705C17DB5565F8B /* OTGChartProcessView */,
-				ABEE51457D66E61D0C550AF86F83CDB9 /* OTGChartView */,
-				945ABA7899E2EEA84C9D6F0F89F32688 /* OTGCommonClass */,
-				2C796FD83DA118D1E5A3885332E97F14 /* Resources */,
-				1B66953B5994C387E29634EDC76EE3E1 /* Support Files */,
-				3BF0B212F1466C0FC42422CA4B5EE00B /* Supporting Files */,
-			);
-			name = OTGanttChartKit;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		ABEE51457D66E61D0C550AF86F83CDB9 /* OTGChartView */ = {
-			isa = PBXGroup;
-			children = (
-				9BFA0914B9545167DADA4AF241C3B055 /* OTGChartView.h */,
-				AE2CFCEEA8C73EB8B86FC330463A97C9 /* OTGChartView.m */,
-				ED656F512A68582D3B74FEECF2E315C2 /* OTGDateView */,
-				79F57B8562B5D11BE31491B895F07855 /* TableView */,
-			);
-			name = OTGChartView;
-			path = Classes/OTGChartView;
-			sourceTree = "<group>";
-		};
-		AE2FED80B5BC0E333C81000AE83E43EE /* Pods-DemoApplication */ = {
-			isa = PBXGroup;
-			children = (
-				81047BC4556EB4BBA3B93D95C1A197F1 /* Pods-DemoApplication-acknowledgements.markdown */,
-				051935CF6B60FE0230342D94F7A1009A /* Pods-DemoApplication-acknowledgements.plist */,
-				DFD984FCB41E12FB5E29813AD1C5F06C /* Pods-DemoApplication-dummy.m */,
-				F447A733074FE5D16C8FF219E486BDF0 /* Pods-DemoApplication-frameworks.sh */,
-				06AE6B48D717E8E5C73F9F415C30E4A2 /* Pods-DemoApplication-resources.sh */,
-				4CA3DC4428FAFF06056E65DE3CD37DE5 /* Pods-DemoApplication.debug.xcconfig */,
-				1ED7198FB54A4277D8115FB2160E9B54 /* Pods-DemoApplication.release.xcconfig */,
-			);
-			name = "Pods-DemoApplication";
-			path = "Target Support Files/Pods-DemoApplication";
-			sourceTree = "<group>";
-		};
-		B1A143E49971CC427D81851239BDE170 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				999A582AC0019E6F0C2057CAEB30F7A9 /* OTGanttChartKit */,
-			);
-			name = "Development Pods";
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -295,35 +227,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BFC2A097C3C7223293AB72D61B64FD69 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5F2E7C780EE1AD96001F1E4264E567C1 /* libOTGanttChartKit.a */,
-				5C69F510E1BE893CB43968E705703490 /* libPods-DemoApplication.a */,
-				790A5216DA8F9C4DB6CA8DEE29E850DF /* OTGanttChartKit.bundle */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		CA4982A6BAF347B9B432451C3DDF170A /* OTGanttChartView */ = {
-			isa = PBXGroup;
-			children = (
-				B29C40CDEA43373B005F3A5F8E202CC6 /* OTGanttChartView.xib */,
-			);
-			name = OTGanttChartView;
-			path = Classes/OTGanttChartView;
-			sourceTree = "<group>";
-		};
-		CCB0841F77A4DBE0ADAD3921AE8785C6 /* Section */ = {
-			isa = PBXGroup;
-			children = (
-				B69AD4DC28FD1320308CB512BF460CD9 /* OTGChartSectionView.h */,
-				726F92B03ECB6F7C04A9301FAB9E478D /* OTGChartSectionView.m */,
-			);
-			name = Section;
-			path = Section;
-			sourceTree = "<group>";
-		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -332,78 +235,119 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		D6C63FE3385087604705C17DB5565F8B /* OTGChartProcessView */ = {
+		DF593BBECB2CB278F623A8120C02A12A /* OTGanttChartKit */ = {
 			isa = PBXGroup;
 			children = (
-				F11EFF09AB987DEF621CFFDDD5D5BA83 /* OTGChartProcessView.h */,
-				9ED8538B415711E388F473108DA7EA53 /* OTGChartProcessView.m */,
+				079D2FFDB63AB0C65411C34C11B2C19F /* OTGanttChartConstant.h */,
+				1057422813F5AA7DECDA42BB4EFBAE51 /* OTGanttChartKit.h */,
+				7C83CAC992959F88D865649D7C4A892B /* OTGanttChartView.h */,
+				0ACEF376895B5F76B6DE6193E01F7062 /* OTGanttChartView.m */,
+				645942AFDC28232AE252202F382C2D77 /* OTGChartDrawView.h */,
+				3F3659C6A0267B67986FA962EE1956EB /* OTGChartDrawView.m */,
+				B0FBF7FC918F74A2AA600C0D8CD4026F /* OTGChartPointView.h */,
+				55F7D54EA30CACDA5597F83AC0893A9C /* OTGChartPointView.m */,
+				FAC5FA3E8F8D1AE01141F222773928E1 /* OTGChartProcessView.h */,
+				F1E6DA933920EFD63BB73D5EC0DF8ADF /* OTGChartProcessView.m */,
+				BEA08EF110F96CB8C9E1FCAF8056E076 /* OTGChartSectionView.h */,
+				B0A33EE73BF99C7F9914EE831A5E39C3 /* OTGChartSectionView.m */,
+				081432F55CC08C0E3EF3EBCED4CA2B16 /* OTGChartView.h */,
+				B6CDFBF1F1F14F5D42FEDD5706AC89B6 /* OTGChartView.m */,
+				5EA1F7DDB7B3CD661C1679747A20ADB9 /* OTGChartViewCell.h */,
+				F22051A081F2F4F4FA9B603832B51673 /* OTGChartViewCell.m */,
+				85F4BB78D76EE99C452EE31555AF0E63 /* OTGCommonClass.h */,
+				9DD32A3A63373D9F61F04F89910C6A2A /* OTGCommonClass.m */,
+				33F093B6DE981CDAB1154E6D580219C1 /* OTGDateView.h */,
+				07FBF026A3657123D7ACD2CD6A5F4D46 /* OTGDateView.m */,
+				4CE6F21CD49FED72B7C7D104B597640E /* OTGDrawingCommonClass.h */,
+				69CAA11D29275B9341A267DF5655EF84 /* OTGDrawingCommonClass.m */,
+				11C50B4685B5E522E263DEB4A98D52A8 /* OTGTodayFigureView.h */,
+				02CFF3BEA86C85A282365F48DD0AE4E9 /* OTGTodayFigureView.m */,
+				5DC08AE59AE721D1681E590001889DE0 /* Resources */,
+				765650D631D5B048AE99096BCBB91E68 /* Support Files */,
 			);
-			name = OTGChartProcessView;
-			path = Classes/OTGChartProcessView;
-			sourceTree = "<group>";
-		};
-		ED656F512A68582D3B74FEECF2E315C2 /* OTGDateView */ = {
-			isa = PBXGroup;
-			children = (
-				47FE464981B0A626EEDB474A4B2BCE8B /* OTGDateView.h */,
-				8DC5696C144C35119E749B5BC2C8BFFB /* OTGDateView.m */,
-				A36023A4C15AB53263E7013FAA802078 /* OTGTodayFigureView.h */,
-				F1B271FEC0E7ADD0B32171EAC75736E6 /* OTGTodayFigureView.m */,
-			);
-			name = OTGDateView;
-			path = OTGDateView;
-			sourceTree = "<group>";
-		};
-		F05EC599272850DDF85AB327D3DB6E98 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AE2FED80B5BC0E333C81000AE83E43EE /* Pods-DemoApplication */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		F68C92D648C72F8442B52C73F6D04A12 /* OTGChartView */ = {
-			isa = PBXGroup;
-			children = (
-				5560AFEF591FCB1151C14445FD5CDE59 /* OTGChartView.xib */,
-			);
-			name = OTGChartView;
-			path = Classes/OTGChartView;
+			name = OTGanttChartKit;
+			path = OTGanttChartKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9E794CC173CBDAB0793B4BAB4FBF39F2 /* Headers */ = {
+		4FC582A799FB5FCA5356F4DEAE74B97B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7C0AACF0A5B9B27102B88A48C0FF322 /* OTGanttChartConstant.h in Headers */,
-				09B321339F2804D3AB7D2D420549279D /* OTGanttChartKit.h in Headers */,
-				2DB6A5C395CC65D7CDAC460C6F5B2B02 /* OTGanttChartView.h in Headers */,
-				5F2325CCAB498C1EC3C8076B2EDBF862 /* OTGChartDrawView.h in Headers */,
-				BBCCCA721BC0D033552F399AC469E5B0 /* OTGChartPointView.h in Headers */,
-				B6634ADC1F9DE20E477BE05395F3167D /* OTGChartProcessView.h in Headers */,
-				7451989107C468618CECD9E48F0B4915 /* OTGChartSectionView.h in Headers */,
-				93B1FAE7F90F75FA64A2A08E61BC52D9 /* OTGChartView.h in Headers */,
-				9F2991F2B8AAE7736FE88E7A1140EEEA /* OTGChartViewCell.h in Headers */,
-				AEBEBC08D3591FF832BD5FAA6D46C029 /* OTGCommonClass.h in Headers */,
-				2591669B09BC5BBBE8CB271652F730AC /* OTGDateView.h in Headers */,
-				F3A292CCAE665EF58AC0CC8AA7101742 /* OTGDrawingCommonClass.h in Headers */,
-				B4B9A2DA83C69FEA258538BE589B2DA9 /* OTGTodayFigureView.h in Headers */,
+				6B29B0EEE802EDC14CA90511E2A07182 /* OTGanttChartConstant.h in Headers */,
+				87B7441FDA562D6A918E98247D967CBB /* OTGanttChartKit-umbrella.h in Headers */,
+				591DC823E5190EFFE5A6781D8ADF793D /* OTGanttChartKit.h in Headers */,
+				C0A1494C41DCB40DB5F95360A6A61954 /* OTGanttChartView.h in Headers */,
+				602F30973DDEDF6E3C340AF4B8B7B45E /* OTGChartDrawView.h in Headers */,
+				8A8AC326AEFC67444E53A78F109A0E6F /* OTGChartPointView.h in Headers */,
+				B0077DB378DFCADCD983B4CC19BAEABA /* OTGChartProcessView.h in Headers */,
+				08664D2FA0EBC6CF744DE92943E9694A /* OTGChartSectionView.h in Headers */,
+				A656A2941028BCF2365A58C5ACA807F2 /* OTGChartView.h in Headers */,
+				F12907B9DDE6C64F95608E8D7405BB11 /* OTGChartViewCell.h in Headers */,
+				72810C6DCB9C441E741DB1CCB8ACE138 /* OTGCommonClass.h in Headers */,
+				ABAAA0C3E6DCAB55A98F6D50A7EE14F1 /* OTGDateView.h in Headers */,
+				5D450C950C0FDA70B67C795E3E579D12 /* OTGDrawingCommonClass.h in Headers */,
+				4736019D6DC655FD7C43721C9825B31A /* OTGTodayFigureView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EED521DF52CCD57C3A8D7326A5BB3682 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E94B2A3FFB089FBDFEA5C9F02769D00D /* Pods-DemoApplication-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		234425C3FB2920B554AEF6B00C62375C /* OTGanttChartKit-OTGanttChartKit */ = {
+		C6C6EC89EE67279F1F294AFDC11546D6 /* Pods-DemoApplication */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 963DB46CE7E804FCEDA2950E7439488D /* Build configuration list for PBXNativeTarget "OTGanttChartKit-OTGanttChartKit" */;
+			buildConfigurationList = C419A7D73E3A25E67351150753DFA09C /* Build configuration list for PBXNativeTarget "Pods-DemoApplication" */;
 			buildPhases = (
-				693797A2B0BCAC4A76FF7A7FDB2E5ED4 /* Sources */,
-				D7AAB1C8C8C6967F10F2083EFF3C131F /* Frameworks */,
-				A318D6E37BBF8FA78D9B1F52D1CB16D6 /* Resources */,
+				F46B3D2BE11D2D09F8555408E06E7570 /* Sources */,
+				E7588C423CE6EA968415D037B70C82E2 /* Frameworks */,
+				EED521DF52CCD57C3A8D7326A5BB3682 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C25FF914D84E85AD60D3DB2C27C855D /* PBXTargetDependency */,
+			);
+			name = "Pods-DemoApplication";
+			productName = "Pods-DemoApplication";
+			productReference = 08100DCB2CB01A14E87C553750AA662B /* Pods_DemoApplication.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CB1251BFCEF3A808B5F0F4F631428FB7 /* OTGanttChartKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E18E5D4C9DF26B6754509A15CAB70B88 /* Build configuration list for PBXNativeTarget "OTGanttChartKit" */;
+			buildPhases = (
+				9AEBC88FC0CD9749C9ACFF477C28D907 /* Sources */,
+				56F6D10792EA05BF348EF065EEA91EBD /* Frameworks */,
+				47D053F4AF63FDE5AE5E0A3B85BC886A /* Resources */,
+				4FC582A799FB5FCA5356F4DEAE74B97B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE4E67A9FA4917C4CD419BEF3BBEEB6A /* PBXTargetDependency */,
+			);
+			name = OTGanttChartKit;
+			productName = OTGanttChartKit;
+			productReference = EF47EF40E1DAFEB8D815D826FC47782B /* OTGanttChartKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CC1BCE8FBB17CA8BB12F63583C8ACE4C /* OTGanttChartKit-OTGanttChartKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A797EC0C1A7F8259F0E85C327B6204F /* Build configuration list for PBXNativeTarget "OTGanttChartKit-OTGanttChartKit" */;
+			buildPhases = (
+				89D007986398524B459A688DC0EA351D /* Sources */,
+				DED8F1C07535FEBFDC69D1D48E470A98 /* Frameworks */,
+				FD73665A085EA0AF1E4D2E751CD44405 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -411,43 +355,8 @@
 			);
 			name = "OTGanttChartKit-OTGanttChartKit";
 			productName = "OTGanttChartKit-OTGanttChartKit";
-			productReference = 790A5216DA8F9C4DB6CA8DEE29E850DF /* OTGanttChartKit.bundle */;
+			productReference = 8B063B6CD95718F0B2B79CD520AEF20F /* OTGanttChartKit.bundle */;
 			productType = "com.apple.product-type.bundle";
-		};
-		79F5A7D31998FA2A0CD513918CF9C07C /* OTGanttChartKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 02AEE5B01A5CC2D98783FCC0EA77838E /* Build configuration list for PBXNativeTarget "OTGanttChartKit" */;
-			buildPhases = (
-				15453C18619B1B1D3561F305F6C44877 /* Sources */,
-				E496EBBF4C8BFCC4184DF7578D62EB2C /* Frameworks */,
-				9E794CC173CBDAB0793B4BAB4FBF39F2 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D98C27C3E01C8686CB731962EE04D053 /* PBXTargetDependency */,
-			);
-			name = OTGanttChartKit;
-			productName = OTGanttChartKit;
-			productReference = 5F2E7C780EE1AD96001F1E4264E567C1 /* libOTGanttChartKit.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		B2809DE3B841DE59752A2F3F91BDB9BA /* Pods-DemoApplication */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4C6856380B88E371E602845B36A3455F /* Build configuration list for PBXNativeTarget "Pods-DemoApplication" */;
-			buildPhases = (
-				1E285F1072B90F5A1F97A9B221BD5BF2 /* Sources */,
-				1B15BF748F2D67015444E4779D987114 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D830E1B19E813A9B8FF79FD8D488456C /* PBXTargetDependency */,
-			);
-			name = "Pods-DemoApplication";
-			productName = "Pods-DemoApplication";
-			productReference = 5C69F510E1BE893CB43968E705703490 /* libPods-DemoApplication.a */;
-			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -466,106 +375,91 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = BFC2A097C3C7223293AB72D61B64FD69 /* Products */;
+			productRefGroup = 16D70337312234239ECB9EB505DC64C0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				79F5A7D31998FA2A0CD513918CF9C07C /* OTGanttChartKit */,
-				234425C3FB2920B554AEF6B00C62375C /* OTGanttChartKit-OTGanttChartKit */,
-				B2809DE3B841DE59752A2F3F91BDB9BA /* Pods-DemoApplication */,
+				CB1251BFCEF3A808B5F0F4F631428FB7 /* OTGanttChartKit */,
+				CC1BCE8FBB17CA8BB12F63583C8ACE4C /* OTGanttChartKit-OTGanttChartKit */,
+				C6C6EC89EE67279F1F294AFDC11546D6 /* Pods-DemoApplication */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A318D6E37BBF8FA78D9B1F52D1CB16D6 /* Resources */ = {
+		47D053F4AF63FDE5AE5E0A3B85BC886A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB3D7D9657CDFDB67AE33CAC8610D7F1 /* OTGanttChartView.xib in Resources */,
-				6F8BA00BA00B3E4D7C23C6FAC3891087 /* OTGanttChartViewImage.xcassets in Resources */,
-				CCBCAA4F10A0F4CECEFE4F9442F10A95 /* OTGChartView.xib in Resources */,
+				A5B8CE20792FDA4BFCDB1D62D335000D /* OTGanttChartKit.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FD73665A085EA0AF1E4D2E751CD44405 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A95ABF1D85B9E20F0B0AA7C5FF8EA528 /* OTGanttChartView.xib in Resources */,
+				36D9CF5705D34D05945CE8FC6CA692DC /* OTGanttChartViewImage.xcassets in Resources */,
+				8ACF0D8EE086392A50F7CF1589E09EE6 /* OTGChartView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		15453C18619B1B1D3561F305F6C44877 /* Sources */ = {
+		89D007986398524B459A688DC0EA351D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32F9B7A110E3264CC5C75986DDF4A324 /* OTGanttChartKit-dummy.m in Sources */,
-				FAC59D45BB1B44F5161720931423E664 /* OTGanttChartView.m in Sources */,
-				2547E4D555C13540140BCAB7D5B5C0DD /* OTGChartDrawView.m in Sources */,
-				321160F8D15734AB6FE568506CF16673 /* OTGChartPointView.m in Sources */,
-				4136EF064942B87DA831C82C84612622 /* OTGChartProcessView.m in Sources */,
-				0A0790C754C1F508AB3B521F7F9FE189 /* OTGChartSectionView.m in Sources */,
-				E2AEA5DFBCA753FF7053BFA23FECA54D /* OTGChartView.m in Sources */,
-				2F58E2D603A83ED6B89595D414AB2F0E /* OTGChartViewCell.m in Sources */,
-				10D57F83B88EDD19D89BB57A160F785E /* OTGCommonClass.m in Sources */,
-				893368DB3388F2C370B2B7E20AE2A44D /* OTGDateView.m in Sources */,
-				9465A344497CD473FEE4451CBD4C5148 /* OTGDrawingCommonClass.m in Sources */,
-				DACB1F0DD8F0E21673CFC19C28A226A4 /* OTGTodayFigureView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1E285F1072B90F5A1F97A9B221BD5BF2 /* Sources */ = {
+		9AEBC88FC0CD9749C9ACFF477C28D907 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				469FB0B759FEA97756178FA727377B7F /* Pods-DemoApplication-dummy.m in Sources */,
+				B0D7BE3D9A5E3DD0E2962E04F951CECC /* OTGanttChartKit-dummy.m in Sources */,
+				31DA8DE5075786F22EB600DA37F6878A /* OTGanttChartView.m in Sources */,
+				591255F99336A7EF0D05406304C42B37 /* OTGChartDrawView.m in Sources */,
+				5C16A61268531CD0226FDD2C6F3A2620 /* OTGChartPointView.m in Sources */,
+				98831570DC59092B0429DA4551A20847 /* OTGChartProcessView.m in Sources */,
+				5CAAEB7F72C9E3F990E594A551980C9D /* OTGChartSectionView.m in Sources */,
+				69DDD08C9493302236ABC662ABA98BC3 /* OTGChartView.m in Sources */,
+				C3D11552109CFA6929A42486D6E17314 /* OTGChartViewCell.m in Sources */,
+				5BB2F2E229F7E29D3E3FD3384C696472 /* OTGCommonClass.m in Sources */,
+				A6C2241098983ED20F1AA813430B6AD1 /* OTGDateView.m in Sources */,
+				ED40AA5DE402BBDDD6F37D4572F21B37 /* OTGDrawingCommonClass.m in Sources */,
+				63DBE6E8F092FE26840811159B40AA0A /* OTGTodayFigureView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		693797A2B0BCAC4A76FF7A7FDB2E5ED4 /* Sources */ = {
+		F46B3D2BE11D2D09F8555408E06E7570 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9E99970A6A3B0051AA25FEA9C6B68F8 /* Pods-DemoApplication-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D830E1B19E813A9B8FF79FD8D488456C /* PBXTargetDependency */ = {
+		2C25FF914D84E85AD60D3DB2C27C855D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OTGanttChartKit;
-			target = 79F5A7D31998FA2A0CD513918CF9C07C /* OTGanttChartKit */;
-			targetProxy = 76E508A68A5654D2184E1E6EBD51A930 /* PBXContainerItemProxy */;
+			target = CB1251BFCEF3A808B5F0F4F631428FB7 /* OTGanttChartKit */;
+			targetProxy = AA5EA64D8D84D1AC4084AD4876A36F8A /* PBXContainerItemProxy */;
 		};
-		D98C27C3E01C8686CB731962EE04D053 /* PBXTargetDependency */ = {
+		EE4E67A9FA4917C4CD419BEF3BBEEB6A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "OTGanttChartKit-OTGanttChartKit";
-			target = 234425C3FB2920B554AEF6B00C62375C /* OTGanttChartKit-OTGanttChartKit */;
-			targetProxy = BF6ED96E0BEFC9E34D1FD7A47EC5C05B /* PBXContainerItemProxy */;
+			target = CC1BCE8FBB17CA8BB12F63583C8ACE4C /* OTGanttChartKit-OTGanttChartKit */;
+			targetProxy = D1718CC5504655A9F5C2FF194C57D10D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		038DB691A6F3F39B7824D691F29C935D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CA3DC4428FAFF06056E65DE3CD37DE5 /* Pods-DemoApplication.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 		1C7D17A37D091C98D2F0DD886C3A9320 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -615,27 +509,53 @@
 			};
 			name = Debug;
 		};
-		1FC4810FE87767BBEFAA268B9429F29B /* Debug */ = {
+		2F622B483832642711760D647224C386 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96AB51C85D920820D910ED21CE030A2F /* OTGanttChartKit.xcconfig */;
+			baseConfigurationReference = 7823F0FF746D6FF1AE591E56962E2409 /* OTGanttChartKit.xcconfig */;
 			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/OTGanttChartKit";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/OTGanttChartKit/ResourceBundle-OTGanttChartKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = OTGanttChartKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		3244E8E64CBB9996080BFC9CD4F3EFA2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7823F0FF746D6FF1AE591E56962E2409 /* OTGanttChartKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/OTGanttChartKit/OTGanttChartKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OTGanttChartKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OTGanttChartKit/OTGanttChartKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = OTGanttChartKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
@@ -683,9 +603,78 @@
 			};
 			name = Release;
 		};
-		75271F885F4235FB8CF042B30AAC39E7 /* Debug */ = {
+		712103C51A43D0A3877E3BC98712FE11 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96AB51C85D920820D910ED21CE030A2F /* OTGanttChartKit.xcconfig */;
+			baseConfigurationReference = 7823F0FF746D6FF1AE591E56962E2409 /* OTGanttChartKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/OTGanttChartKit/OTGanttChartKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/OTGanttChartKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/OTGanttChartKit/OTGanttChartKit.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = OTGanttChartKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		82B516549D73DA7AF273196C1F2745B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D53F3EFD6963BC5E069C6FCECFDA4475 /* Pods-DemoApplication.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DemoApplication/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DemoApplication/Pods-DemoApplication.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_DemoApplication;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8AAF0207578046187EC040846D542D1A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7823F0FF746D6FF1AE591E56962E2409 /* OTGanttChartKit.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/OTGanttChartKit";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -698,80 +687,52 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
-		9B96777AC9BF9C4E155C3BC160743377 /* Release */ = {
+		9024F728EEFFFE71ABC217DF65B3A262 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1ED7198FB54A4277D8115FB2160E9B54 /* Pods-DemoApplication.release.xcconfig */;
+			baseConfigurationReference = 5FB1830896585F245FDEFFDBF7E974EA /* Pods-DemoApplication.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-DemoApplication/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-DemoApplication/Pods-DemoApplication.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		DED722730FB560CF27D4B7ED11696DD6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96AB51C85D920820D910ED21CE030A2F /* OTGanttChartKit.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/OTGanttChartKit/OTGanttChartKit-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-			};
-			name = Release;
-		};
-		E354E3FB5EFF6E10CAD396468DBBA2F8 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 96AB51C85D920820D910ED21CE030A2F /* OTGanttChartKit.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/OTGanttChartKit";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/OTGanttChartKit/ResourceBundle-OTGanttChartKit-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = OTGanttChartKit;
+				PRODUCT_NAME = Pods_DemoApplication;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		02AEE5B01A5CC2D98783FCC0EA77838E /* Build configuration list for PBXNativeTarget "OTGanttChartKit" */ = {
+		2A797EC0C1A7F8259F0E85C327B6204F /* Build configuration list for PBXNativeTarget "OTGanttChartKit-OTGanttChartKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FC4810FE87767BBEFAA268B9429F29B /* Debug */,
-				DED722730FB560CF27D4B7ED11696DD6 /* Release */,
+				2F622B483832642711760D647224C386 /* Debug */,
+				8AAF0207578046187EC040846D542D1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -785,20 +746,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C6856380B88E371E602845B36A3455F /* Build configuration list for PBXNativeTarget "Pods-DemoApplication" */ = {
+		C419A7D73E3A25E67351150753DFA09C /* Build configuration list for PBXNativeTarget "Pods-DemoApplication" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				038DB691A6F3F39B7824D691F29C935D /* Debug */,
-				9B96777AC9BF9C4E155C3BC160743377 /* Release */,
+				82B516549D73DA7AF273196C1F2745B9 /* Debug */,
+				9024F728EEFFFE71ABC217DF65B3A262 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		963DB46CE7E804FCEDA2950E7439488D /* Build configuration list for PBXNativeTarget "OTGanttChartKit-OTGanttChartKit" */ = {
+		E18E5D4C9DF26B6754509A15CAB70B88 /* Build configuration list for PBXNativeTarget "OTGanttChartKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				75271F885F4235FB8CF042B30AAC39E7 /* Debug */,
-				E354E3FB5EFF6E10CAD396468DBBA2F8 /* Release */,
+				3244E8E64CBB9996080BFC9CD4F3EFA2 /* Debug */,
+				712103C51A43D0A3877E3BC98712FE11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

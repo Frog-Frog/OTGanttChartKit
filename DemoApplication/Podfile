@@ -6,5 +6,5 @@ target 'DemoApplication' do
   # use_frameworks!
 
   # Pods for DemoApplication
-  pod 'OTGanttChartKit', :path => '..'
+  pod 'OTGanttChartKit'
 end

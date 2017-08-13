@@ -14,7 +14,7 @@
 		044877241F2FF2DA00F6E712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044877221F2FF2DA00F6E712 /* LaunchScreen.storyboard */; };
 		044877301F2FF55500F6E712 /* GanttChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448772E1F2FF55500F6E712 /* GanttChartViewController.m */; };
 		044877311F2FF55500F6E712 /* GanttChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0448772F1F2FF55500F6E712 /* GanttChartViewController.xib */; };
-		D061D7FC4D9464CC19D1B71B /* libPods-DemoApplication.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2714EB5FB8A4BD44EBF32C13 /* libPods-DemoApplication.a */; };
+		9C4F51D281D2AE97AA1EF8BF /* Pods_DemoApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944DDAB26C3A326C961774C3 /* Pods_DemoApplication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,8 +53,8 @@
 		0448772D1F2FF55500F6E712 /* GanttChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GanttChartViewController.h; path = GanttChartViewController/GanttChartViewController.h; sourceTree = "<group>"; };
 		0448772E1F2FF55500F6E712 /* GanttChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GanttChartViewController.m; path = GanttChartViewController/GanttChartViewController.m; sourceTree = "<group>"; };
 		0448772F1F2FF55500F6E712 /* GanttChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GanttChartViewController.xib; path = GanttChartViewController/GanttChartViewController.xib; sourceTree = "<group>"; };
-		2714EB5FB8A4BD44EBF32C13 /* libPods-DemoApplication.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoApplication.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7120E0B7F9C894C2B29B488D /* Pods-DemoApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApplication.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoApplication/Pods-DemoApplication.release.xcconfig"; sourceTree = "<group>"; };
+		944DDAB26C3A326C961774C3 /* Pods_DemoApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9C43F380195D2D6D6A0BBA /* Pods-DemoApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApplication.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoApplication/Pods-DemoApplication.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D061D7FC4D9464CC19D1B71B /* libPods-DemoApplication.a in Frameworks */,
+				9C4F51D281D2AE97AA1EF8BF /* Pods_DemoApplication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				042C1A571F3EB68400F1CB0C /* libOTGanttChartKit.a */,
-				2714EB5FB8A4BD44EBF32C13 /* libPods-DemoApplication.a */,
+				944DDAB26C3A326C961774C3 /* Pods_DemoApplication.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -219,7 +219,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DemoApplication/Pods-DemoApplication-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/OTGanttChartKit/OTGanttChartKit.bundle,
+				"$PODS_CONFIGURATION_BUILD_DIR/OTGanttChartKit/OTGanttChartKit.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -236,9 +236,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DemoApplication/Pods-DemoApplication-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/OTGanttChartKit/OTGanttChartKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OTGanttChartKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
