@@ -14,6 +14,8 @@ Coming soon...
 ## Usage
 ```objectivec:Objective-C
 
+#import <OTGanttChartKit/OTGanttChartKit.h>
+
 OTGanttChartView *ganttChartView = [[OTGanttChartView alloc]initWithFrame:self.yourView.bounds];
 
 ganttChartView.dataSource = self;
@@ -27,14 +29,14 @@ ganttChartView.delegate = self;
 
 ## Install
 
-###CocoaPods
+**CocoaPods**
 Add this to your Podfile.
 
 ```PodFile
 pod 'OTGanttChartKit'
 ```
 
-###Carthage
+**Carthage**
 To be prepared.
 Coming soon...
 
