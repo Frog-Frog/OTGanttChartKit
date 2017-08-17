@@ -219,7 +219,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DemoApplication/Pods-DemoApplication-resources.sh",
-				"$PODS_CONFIGURATION_BUILD_DIR/OTGanttChartKit/OTGanttChartKit.bundle",
+				$PODS_CONFIGURATION_BUILD_DIR/OTGanttChartKit/OTGanttChartKit.bundle,
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
