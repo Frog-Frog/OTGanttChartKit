@@ -29,16 +29,18 @@ ganttChartView.delegate = self;
 
 ## Install
 
-**CocoaPods**
+**CocoaPods**  
 Add this to your Podfile.
 
 ```PodFile
 pod 'OTGanttChartKit'
 ```
 
-**Carthage**
-To be prepared.
-Coming soon...
+**Carthage**  
+Add this to your Cartfile.
+```Cartfile
+github "PKPK-Carnage/OTGanttChartKit"
+```
 
 ## Licence
 
