@@ -14,7 +14,7 @@
 		044877241F2FF2DA00F6E712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044877221F2FF2DA00F6E712 /* LaunchScreen.storyboard */; };
 		044877301F2FF55500F6E712 /* GanttChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448772E1F2FF55500F6E712 /* GanttChartViewController.m */; };
 		044877311F2FF55500F6E712 /* GanttChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0448772F1F2FF55500F6E712 /* GanttChartViewController.xib */; };
-		04523DDE1F45E06200410DD2 /* OTGanttChartKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04523DDD1F45E06200410DD2 /* OTGanttChartKit.framework */; };
+		9C4F51D281D2AE97AA1EF8BF /* Pods_DemoApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 944DDAB26C3A326C961774C3 /* Pods_DemoApplication.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -53,9 +53,8 @@
 		0448772D1F2FF55500F6E712 /* GanttChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GanttChartViewController.h; path = GanttChartViewController/GanttChartViewController.h; sourceTree = "<group>"; };
 		0448772E1F2FF55500F6E712 /* GanttChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GanttChartViewController.m; path = GanttChartViewController/GanttChartViewController.m; sourceTree = "<group>"; };
 		0448772F1F2FF55500F6E712 /* GanttChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GanttChartViewController.xib; path = GanttChartViewController/GanttChartViewController.xib; sourceTree = "<group>"; };
-		04523DDD1F45E06200410DD2 /* OTGanttChartKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OTGanttChartKit.framework; path = Carthage/Build/iOS/OTGanttChartKit.framework; sourceTree = "<group>"; };
-		098DB4B2B187EB091B437A56 /* libPods-DemoApplication.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoApplication.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7120E0B7F9C894C2B29B488D /* Pods-DemoApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApplication.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoApplication/Pods-DemoApplication.release.xcconfig"; sourceTree = "<group>"; };
+		944DDAB26C3A326C961774C3 /* Pods_DemoApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9C43F380195D2D6D6A0BBA /* Pods-DemoApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApplication.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoApplication/Pods-DemoApplication.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04523DDE1F45E06200410DD2 /* OTGanttChartKit.framework in Frameworks */,
+				9C4F51D281D2AE97AA1EF8BF /* Pods_DemoApplication.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,9 +133,8 @@
 		8EAF90067950FFA1428CEFE7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				04523DDD1F45E06200410DD2 /* OTGanttChartKit.framework */,
 				042C1A571F3EB68400F1CB0C /* libOTGanttChartKit.a */,
-				098DB4B2B187EB091B437A56 /* libPods-DemoApplication.a */,
+				944DDAB26C3A326C961774C3 /* Pods_DemoApplication.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,12 +146,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 044877281F2FF2DA00F6E712 /* Build configuration list for PBXNativeTarget "DemoApplication" */;
 			buildPhases = (
+				C8429EAB26D7EB329F5F03ED /* [CP] Check Pods Manifest.lock */,
 				0448770D1F2FF2DA00F6E712 /* Sources */,
 				0448770E1F2FF2DA00F6E712 /* Frameworks */,
 				0448770F1F2FF2DA00F6E712 /* Resources */,
 				041EF5081F33767E006C0DEF /* Embed Frameworks */,
+				92EA8017B5FAB6064BC093BC /* [CP] Embed Pods Frameworks */,
+				397B04C6C2058C08F450D629 /* [CP] Copy Pods Resources */,
 				042C1A5B1F3EB68E00F1CB0C /* Embed PlugIns */,
-				04523DDF1F45E08300410DD2 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -212,19 +212,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		04523DDF1F45E08300410DD2 /* ShellScript */ = {
+		397B04C6C2058C08F450D629 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/OTGanttChartKit.framework",
+				"${SRCROOT}/Pods/Target Support Files/Pods-DemoApplication/Pods-DemoApplication-resources.sh",
+				$PODS_CONFIGURATION_BUILD_DIR/OTGanttChartKit/OTGanttChartKit.bundle,
 			);
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoApplication/Pods-DemoApplication-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92EA8017B5FAB6064BC093BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DemoApplication/Pods-DemoApplication-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/OTGanttChartKit/OTGanttChartKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OTGanttChartKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DemoApplication/Pods-DemoApplication-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8429EAB26D7EB329F5F03ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DemoApplication-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -362,10 +402,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = DemoApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -386,10 +422,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = DemoApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
