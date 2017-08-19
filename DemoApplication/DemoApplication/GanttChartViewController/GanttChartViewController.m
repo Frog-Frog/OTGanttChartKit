@@ -216,7 +216,6 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
     }
     
     view.textLabel.text = headerText;
-    view.textLabel.backgroundColor = [UIColor whiteColor];
     view.textLabel.adjustsFontSizeToFitWidth = YES;
     
     return view;
@@ -234,6 +233,12 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
     return [self.ganttChartView getRowHeightAtIndexPath:indexPath];
 }
 
+
+- (void)tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section
+{
+    UITableViewHeaderFooterView *header = (UITableViewHeaderFooterView *)view;
+    header.textLabel.textColor = [UIColor whiteColor];
+}
 
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

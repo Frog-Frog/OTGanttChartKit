@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="ipad9_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
@@ -27,9 +27,21 @@
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="coS-JM-spu">
                             <rect key="frame" x="-0.5" y="0.0" width="205" height="60"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HiT-k2-jpW">
+                                    <rect key="frame" x="0.0" y="58" width="205" height="2"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="2" id="PzX-tR-EPP"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
                             <color key="backgroundColor" red="0.24705882352941178" green="0.24705882352941178" blue="0.24705882352941178" alpha="1" colorSpace="deviceRGB"/>
                             <constraints>
+                                <constraint firstAttribute="bottom" secondItem="HiT-k2-jpW" secondAttribute="bottom" id="Fgy-Bq-h1u"/>
+                                <constraint firstItem="HiT-k2-jpW" firstAttribute="leading" secondItem="coS-JM-spu" secondAttribute="leading" id="RdT-Oq-BhP"/>
                                 <constraint firstAttribute="height" constant="60" id="oWi-Iv-gYR"/>
+                                <constraint firstAttribute="trailing" secondItem="HiT-k2-jpW" secondAttribute="trailing" id="t3p-x2-al8"/>
                             </constraints>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8G5-MO-0jT">
