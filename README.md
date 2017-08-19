@@ -8,8 +8,7 @@ OTGanttChartKit has color and size adjust functions.
 You can show your original gantt chart.
 
 ## Demo
-To be prepared.
-Coming soon...
+![OTGanttChartView](https://qiita-image-store.s3.amazonaws.com/0/152335/a5068008-bc00-fe8a-7859-15adc8bf4080.gif "OTGanttChartViewDemo.gif")
 
 ## Usage
 ```objectivec:Objective-C
@@ -38,6 +37,7 @@ pod 'OTGanttChartKit'
 
 **Carthage**  
 Add this to your Cartfile.
+
 ```Cartfile
 github "PKPK-Carnage/OTGanttChartKit"
 ```
