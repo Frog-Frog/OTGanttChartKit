@@ -170,10 +170,9 @@ typedef NS_ENUM(NSInteger,OTGHorizontalScrollPosition)
 
 - (void)scrollToRowAtIndexPath:(NSIndexPath *)indexPath atScrollPosition:(UITableViewScrollPosition)scrollPosition animated:(BOOL)animated;
 
-//
-- (NSDate *)getcurrentLeftDate;
+- (NSDate *)getCurrentLeftDate;
 - (NSDate *)getCurrentCenterDate;
-- (NSDate *)getcurrentRightDate;
+- (NSDate *)getCurrentRightDate;
 
 // If you use left menu, yow must use these method and get
 - (CGFloat)getSectionHeightAtSection:(NSInteger)section;

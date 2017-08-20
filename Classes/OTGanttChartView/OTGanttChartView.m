@@ -1194,7 +1194,7 @@
 }
 
 
-- (NSDate *)getcurrentLeftDate
+- (NSDate *)getCurrentLeftDate
 {
     CGFloat leftX = self.ganttScrollView.contentOffset.x;
     return [self getDateFromXpoint:leftX];
@@ -1208,7 +1208,7 @@
 }
 
 
-- (NSDate *)getcurrentRightDate
+- (NSDate *)getCurrentRightDate
 {
     CGFloat rightX = self.ganttScrollView.contentOffset.x + self.ganttScrollView.frame.size.width;
     return [self getDateFromXpoint:rightX];
