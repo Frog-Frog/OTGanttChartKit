@@ -14,8 +14,26 @@
 		044877241F2FF2DA00F6E712 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044877221F2FF2DA00F6E712 /* LaunchScreen.storyboard */; };
 		044877301F2FF55500F6E712 /* GanttChartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0448772E1F2FF55500F6E712 /* GanttChartViewController.m */; };
 		044877311F2FF55500F6E712 /* GanttChartViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0448772F1F2FF55500F6E712 /* GanttChartViewController.xib */; };
-		04523DDE1F45E06200410DD2 /* OTGanttChartKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04523DDD1F45E06200410DD2 /* OTGanttChartKit.framework */; };
+		04F7BB4E1F4B00B4009C9BF9 /* OTGanttChartKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04F7BB4C1F4AFFF5009C9BF9 /* OTGanttChartKit.framework */; };
+		04F7BB4F1F4B00B4009C9BF9 /* OTGanttChartKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 04F7BB4C1F4AFFF5009C9BF9 /* OTGanttChartKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04F7BB4B1F4AFFF5009C9BF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04F7BB471F4AFFF4009C9BF9 /* OTGanttChartKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 044C7DE91F3EC9DE003A53C1;
+			remoteInfo = OTGanttChartKit;
+		};
+		04F7BB501F4B00B4009C9BF9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04F7BB471F4AFFF4009C9BF9 /* OTGanttChartKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 044C7DE81F3EC9DE003A53C1;
+			remoteInfo = OTGanttChartKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		041EF5081F33767E006C0DEF /* Embed Frameworks */ = {
@@ -24,6 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				04F7BB4F1F4B00B4009C9BF9 /* OTGanttChartKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,7 +60,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		042C1A571F3EB68400F1CB0C /* libOTGanttChartKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libOTGanttChartKit.a; path = "Pods/../build/Debug-iphoneos/OTGanttChartKit/libOTGanttChartKit.a"; sourceTree = "<group>"; };
 		044877111F2FF2DA00F6E712 /* DemoApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		044877151F2FF2DA00F6E712 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		044877171F2FF2DA00F6E712 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,10 +71,7 @@
 		0448772D1F2FF55500F6E712 /* GanttChartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GanttChartViewController.h; path = GanttChartViewController/GanttChartViewController.h; sourceTree = "<group>"; };
 		0448772E1F2FF55500F6E712 /* GanttChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GanttChartViewController.m; path = GanttChartViewController/GanttChartViewController.m; sourceTree = "<group>"; };
 		0448772F1F2FF55500F6E712 /* GanttChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GanttChartViewController.xib; path = GanttChartViewController/GanttChartViewController.xib; sourceTree = "<group>"; };
-		04523DDD1F45E06200410DD2 /* OTGanttChartKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OTGanttChartKit.framework; path = Carthage/Build/iOS/OTGanttChartKit.framework; sourceTree = "<group>"; };
-		098DB4B2B187EB091B437A56 /* libPods-DemoApplication.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoApplication.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7120E0B7F9C894C2B29B488D /* Pods-DemoApplication.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApplication.release.xcconfig"; path = "Pods/Target Support Files/Pods-DemoApplication/Pods-DemoApplication.release.xcconfig"; sourceTree = "<group>"; };
-		BD9C43F380195D2D6D6A0BBA /* Pods-DemoApplication.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApplication.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DemoApplication/Pods-DemoApplication.debug.xcconfig"; sourceTree = "<group>"; };
+		04F7BB471F4AFFF4009C9BF9 /* OTGanttChartKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OTGanttChartKit.xcodeproj; path = ../OTGanttChartKit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04523DDE1F45E06200410DD2 /* OTGanttChartKit.framework in Frameworks */,
+				04F7BB4E1F4B00B4009C9BF9 /* OTGanttChartKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +91,7 @@
 			children = (
 				044877131F2FF2DA00F6E712 /* DemoApplication */,
 				044877121F2FF2DA00F6E712 /* Products */,
-				08ACBFE797442B261EACE43D /* Pods */,
-				8EAF90067950FFA1428CEFE7 /* Frameworks */,
+				04F7BB471F4AFFF4009C9BF9 /* OTGanttChartKit.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,23 +136,12 @@
 			name = GanttChartViewController;
 			sourceTree = "<group>";
 		};
-		08ACBFE797442B261EACE43D /* Pods */ = {
+		04F7BB481F4AFFF4009C9BF9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD9C43F380195D2D6D6A0BBA /* Pods-DemoApplication.debug.xcconfig */,
-				7120E0B7F9C894C2B29B488D /* Pods-DemoApplication.release.xcconfig */,
+				04F7BB4C1F4AFFF5009C9BF9 /* OTGanttChartKit.framework */,
 			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8EAF90067950FFA1428CEFE7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				04523DDD1F45E06200410DD2 /* OTGanttChartKit.framework */,
-				042C1A571F3EB68400F1CB0C /* libOTGanttChartKit.a */,
-				098DB4B2B187EB091B437A56 /* libPods-DemoApplication.a */,
-			);
-			name = Frameworks;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,11 +156,11 @@
 				0448770F1F2FF2DA00F6E712 /* Resources */,
 				041EF5081F33767E006C0DEF /* Embed Frameworks */,
 				042C1A5B1F3EB68E00F1CB0C /* Embed PlugIns */,
-				04523DDF1F45E08300410DD2 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				04F7BB511F4B00B4009C9BF9 /* PBXTargetDependency */,
 			);
 			name = DemoApplication;
 			productName = DemoApplication;
@@ -190,12 +193,28 @@
 			mainGroup = 044877081F2FF2DA00F6E712;
 			productRefGroup = 044877121F2FF2DA00F6E712 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 04F7BB481F4AFFF4009C9BF9 /* Products */;
+					ProjectRef = 04F7BB471F4AFFF4009C9BF9 /* OTGanttChartKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				044877101F2FF2DA00F6E712 /* DemoApplication */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		04F7BB4C1F4AFFF5009C9BF9 /* OTGanttChartKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OTGanttChartKit.framework;
+			remoteRef = 04F7BB4B1F4AFFF5009C9BF9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		0448770F1F2FF2DA00F6E712 /* Resources */ = {
@@ -211,23 +230,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		04523DDF1F45E08300410DD2 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/OTGanttChartKit.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		0448770D1F2FF2DA00F6E712 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -240,6 +242,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04F7BB511F4B00B4009C9BF9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OTGanttChartKit;
+			targetProxy = 04F7BB501F4B00B4009C9BF9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0448771D1F2FF2DA00F6E712 /* Main.storyboard */ = {
@@ -357,22 +367,15 @@
 		};
 		044877291F2FF2DA00F6E712 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BD9C43F380195D2D6D6A0BBA /* Pods-DemoApplication.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DemoApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/OTGanttChartKit",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = DemoApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -381,22 +384,15 @@
 		};
 		0448772A1F2FF2DA00F6E712 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7120E0B7F9C894C2B29B488D /* Pods-DemoApplication.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = DemoApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/OTGanttChartKit",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = DemoApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

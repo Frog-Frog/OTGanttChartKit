@@ -33,7 +33,6 @@
 		044C7E301F3ECAA7003A53C1 /* OTGCommonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C7E161F3ECAA7003A53C1 /* OTGCommonClass.m */; };
 		044C7E311F3ECAA7003A53C1 /* OTGDrawingCommonClass.h in Headers */ = {isa = PBXBuildFile; fileRef = 044C7E171F3ECAA7003A53C1 /* OTGDrawingCommonClass.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		044C7E321F3ECAA7003A53C1 /* OTGDrawingCommonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C7E181F3ECAA7003A53C1 /* OTGDrawingCommonClass.m */; };
-		044C7E361F3ED2EC003A53C1 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 044C7E341F3ED2EC003A53C1 /* Info.plist */; };
 		044C7E371F3ED2EC003A53C1 /* OTGanttChartKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 044C7E351F3ED2EC003A53C1 /* OTGanttChartKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -280,6 +279,7 @@
 				TargetAttributes = {
 					044C7DE81F3EC9DE003A53C1 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = NG4PAUE398;
 						ProvisioningStyle = Manual;
 					};
 				};
@@ -306,7 +306,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044C7E361F3ED2EC003A53C1 /* Info.plist in Resources */,
 				044C7E231F3ECAA7003A53C1 /* OTGChartView.xib in Resources */,
 				044C7E1B1F3ECAA7003A53C1 /* OTGanttChartView.xib in Resources */,
 				044C7E1C1F3ECAA7003A53C1 /* OTGanttChartViewImage.xcassets in Resources */,
@@ -439,8 +438,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NG4PAUE398;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -458,8 +458,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NG4PAUE398;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
