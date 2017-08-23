@@ -1257,6 +1257,9 @@
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    self.chartView.currentContentOffsetX = scrollView.contentOffset.x;
+    [self trackingProcessViewLabel:scrollView.contentOffset.x];
+    
     if ([self.delegate respondsToSelector:@selector(ganttChartView:didHorizontalScroll:)]) {
         [self.delegate ganttChartView:self didHorizontalScroll:scrollView];
     }
@@ -1315,6 +1318,29 @@
             }
         }
     }
+}
+
+
+- (void)trackingProcessViewLabel:(CGFloat)xPosition
+{
+    [self.allSectionProcessViewArray enumerateObjectsUsingBlock:^(NSArray<OTGChartProcessView *> * _Nonnull sectionArray, NSUInteger idx, BOOL * _Nonnull stop) {
+        [sectionArray enumerateObjectsUsingBlock:^(OTGChartProcessView * _Nonnull processView, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (processView.textTrackingEnabled) {
+                [processView trackingHorizontalScrollWithCurrentXPosition:xPosition];
+            }
+        }];
+    }];
+    
+    
+    [self.allRowProcessViewArray enumerateObjectsUsingBlock:^(NSArray<NSArray<OTGChartProcessView *> *> * _Nonnull sectionArray, NSUInteger idx, BOOL * _Nonnull stop) {
+        [sectionArray enumerateObjectsUsingBlock:^(NSArray<OTGChartProcessView *> * _Nonnull rowArray, NSUInteger idx, BOOL * _Nonnull stop) {
+            [rowArray enumerateObjectsUsingBlock:^(OTGChartProcessView * _Nonnull processView, NSUInteger idx, BOOL * _Nonnull stop) {
+                if (processView.textTrackingEnabled) {
+                    [processView trackingHorizontalScrollWithCurrentXPosition:xPosition];
+                }
+            }];
+        }];
+    }];
 }
 
 
