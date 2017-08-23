@@ -63,6 +63,8 @@
 
 @property(nonatomic) BOOL todayLineEnabled;
 
+@property(nonatomic) CGFloat currentContentOffsetX;
+
 @property(nonatomic) NSArray<NSDate *>* showDateArray;
 
 @property(nonatomic) NSArray<OTGChartProcessView *> *processViewArray;
