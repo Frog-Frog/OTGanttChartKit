@@ -32,29 +32,33 @@
 
 @interface OTGChartProcessView : UIView
 
-@property (nonatomic, weak) id<OTGChartProcessViewDelegate> delegate;
+@property(nonatomic, weak) id<OTGChartProcessViewDelegate> delegate;
 
 @property(nonatomic) NSIndexPath *indexPath;
 
 @property(nonatomic) NSInteger processNo;
 
+@property(nonatomic) NSInteger minimumProcessViewWidthDays;
+
+@property(nonatomic) OTGFigureType figureType;
+
+@property(nonatomic) CGFloat figureLineWidth;
+
+@property(nonatomic) CGFloat figureSize;
+
+@property(nonatomic) CGFloat figureLeftMargin;
+
+@property(nonatomic) CGFloat figureRightMargin;
+
+@property(nonatomic) BOOL isFill;
+
 @property(nonatomic) UIColor *strokeColor;
 
 @property(nonatomic) UIColor *fillColor;
 
-@property(nonatomic) NSString *title;
+@property(nonatomic) CGFloat lineWidth;
 
 @property(nonatomic) BOOL isDotLine;
-
-@property(nonatomic) BOOL isFill;
-
-@property(nonatomic) OTGFigureType figureType;
-
-@property(nonatomic) CGFloat dateWidth;
-
-@property(nonatomic) CGFloat figureLineWidth;
-
-@property(nonatomic) CGFloat lineWidth;
 
 @property(nonatomic) CGFloat dotLineWidth;
 
@@ -66,11 +70,9 @@
 
 @property(nonatomic) CGFloat finishRatio;
 
-@property(nonatomic) CGFloat figureSize;
+@property(nonatomic,copy) NSString *title;
 
-@property(nonatomic) CGFloat figureLeftMargin;
-
-@property(nonatomic) CGFloat figureRightMargin;
+@property(nonatomic) BOOL textTrackingEnabled;
 
 @property(nonatomic) CGFloat fontSize;
 
@@ -78,8 +80,12 @@
 
 @property(nonatomic) UIColor *textBackgroundColor;
 
+@property(nonatomic) CGFloat dateWidth;
+
 @property(nonatomic) NSArray<NSDate *> *dateArray;
 
 @property(nonatomic) NSArray<NSDate *> *showDateArray;
+
+- (void)trackingHorizontalScrollWithCurrentXPosition:(CGFloat)xPosition;
 
 @end

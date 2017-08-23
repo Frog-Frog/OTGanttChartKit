@@ -103,6 +103,7 @@
 @property (nonatomic) NSArray<NSArray<NSNumber *> *> *allRowProcessHeightArray;
 @property (nonatomic) NSArray<NSArray<NSNumber *> *> *allRowPointHeightArray;
 
+@property(nonatomic) CGFloat currentContentOffsetX;
 
 //public
 - (void)reloadData;

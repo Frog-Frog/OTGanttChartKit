@@ -24,7 +24,7 @@
 
 @interface OTGChartProcessView()
 
-@property (weak, nonatomic) IBOutlet UILabel *processTitleLabel;
+@property (nonatomic) UILabel *processTitleLabel;
 
 @end
 
@@ -54,6 +54,8 @@
     
     self.lineWidth = OTGProcessLineWidth;
     
+    self.isDotLine = NO;
+    
     self.dotLineWidth = OTGProcessDotLineWidth;
     
     self.dotBlankWidth = OTGProcessDotBlankWidth;
@@ -69,6 +71,8 @@
     self.figureSize = OTGFigureSize;
     
     self.figureType = OTGFigureTypeNone;
+    
+    self.textTrackingEnabled = NO;
     
     self.fontSize = OTGChartFontSize;
     
@@ -88,6 +92,46 @@
 {
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tappedChartProcessView:)];
     [self addGestureRecognizer:tapGesture];
+}
+
+
+#pragma mark - LifeCycle
+- (void)willMoveToSuperview:(UIView *)newSuperview
+{
+    [super willMoveToSuperview:newSuperview];
+    
+    if (self.textTrackingEnabled && [self.title length] && !self.processTitleLabel) {
+        [self putTitleLabel];
+    }
+}
+
+
+- (void)putTitleLabel
+{
+    CGFloat startTextX = [self calculateTextStartX];
+    CGFloat startTextY = self.frame.size.height/2 + self.lineWidth/2;
+    
+    CGSize stringSize = [self.title sizeWithAttributes:@{NSFontAttributeName : [UIFont systemFontOfSize:self.fontSize]}];
+    
+    BOOL isContainFirstDate =[OTGCommonClass isContainDate:[self.dateArray firstObject] startDate:[self.showDateArray firstObject] lastDate:[self.showDateArray lastObject]];
+    NSDate *firstDate = (isContainFirstDate)? [self.dateArray firstObject]:[self.showDateArray firstObject];
+    
+    NSInteger daysCount = [OTGCommonClass daysCountFromStartDate:firstDate lastDate:[self.dateArray lastObject] isCountStartDate:YES];
+    daysCount = (self.minimumProcessViewWidthDays > daysCount)? self.minimumProcessViewWidthDays : daysCount;
+    
+    CGFloat maxStringWidth = daysCount * self.dateWidth - startTextX;
+    
+    CGFloat textWidth  = (stringSize.width > maxStringWidth)? maxStringWidth : stringSize.width;
+    
+    self.processTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(startTextX, startTextY, textWidth, stringSize.height)];
+    self.processTitleLabel.text = self.title;
+    self.processTitleLabel.lineBreakMode = NSLineBreakByTruncatingMiddle;
+    self.processTitleLabel.textAlignment = NSTextAlignmentLeft;
+    self.processTitleLabel.font = [UIFont systemFontOfSize:self.fontSize];
+    self.processTitleLabel.textColor = self.fontColor;
+    self.processTitleLabel.backgroundColor = self.textBackgroundColor;
+    
+    [self addSubview:self.processTitleLabel];
 }
 
 
@@ -116,7 +160,10 @@
 - (void)drawRect:(CGRect)rect
 {
     [self drawProcess:rect];
-    [self drawText:rect];
+    
+    if (!self.textTrackingEnabled) {
+        [self drawText:rect];
+    }
 }
 
 
@@ -183,7 +230,7 @@
             
         }
         
-        if (placeCount == 0) {
+        if (placeCount == 0 && firstIsNotFound == NO) {
             if (self.figureType != OTGFigureTypeNone) {
                 //初日が表示中の日付のリストに存在している場合、初回は図形の描画
                 //塗りつぶし色が違う場合があるので、最後に描画する
@@ -306,11 +353,15 @@
 #pragma mark - Calculate
 - (CGFloat)calculateTextStartX
 {
+    BOOL isNotFound;
+    [self searchFirstDateIndex:&isNotFound];
+    
     if (self.figureType != OTGFigureTypeNone) {
+        if (isNotFound == YES) {
+            return [self calculateProcessStartXFromPlaceCount:0 isNotFound:isNotFound];
+        }
         return self.figureLeftMargin + self.figureSize + self.figureRightMargin;
     } else {
-        BOOL isNotFound;
-        [self searchFirstDateIndex:&isNotFound];
         return [self calculateProcessStartXFromPlaceCount:0 isNotFound:isNotFound];
     }
 }
@@ -322,15 +373,13 @@
 {
     CGFloat startX = self.dateWidth * placeCount;
     
-    if (placeCount == 0) {
+    if (placeCount == 0 && isNotFound == NO) {
         if (self.figureType != OTGFigureTypeNone) {
             //図形の描画がある場合は工程のスタートは図形の真ん中からにする
             startX = self.figureLeftMargin + self.figureSize/2;
-        } else {
-            if (!isNotFound) {
-                startX = (self.startRatio == 0.0)? startX : self.startRatio * self.dateWidth;
-            }
         }
+    } else {
+        startX = (self.startRatio == 0.0)? startX : self.startRatio * self.dateWidth;
     }
     
     return startX;
@@ -363,6 +412,59 @@
 - (void)tappedChartProcessView:(UITapGestureRecognizer *)sender
 {
     [self.delegate tappedChartProcessView:self];
+}
+
+
+#pragma mark - Tracking Horizontal Scroll
+- (void)trackingHorizontalScrollWithCurrentXPosition:(CGFloat)xPosition
+{
+    if (!self.textTrackingEnabled || !self.processTitleLabel) {
+        return;
+    }
+   
+    CGFloat textStartX = self.frame.origin.x + [self calculateTextStartX];
+    
+    BOOL isContainFirstDate =[OTGCommonClass isContainDate:[self.dateArray firstObject] startDate:[self.showDateArray firstObject] lastDate:[self.showDateArray lastObject]];
+    NSDate *firstDate = (isContainFirstDate)? [self.dateArray firstObject]:[self.showDateArray firstObject];
+    
+    CGFloat lineWidth = [OTGCommonClass daysCountFromStartDate:firstDate lastDate:[self.dateArray lastObject] isCountStartDate:YES] * self.dateWidth;
+    CGFloat lineEndPoint = self.frame.origin.x + lineWidth;
+    
+    if (textStartX < xPosition && xPosition < lineEndPoint) {
+        
+        if (self.processTitleLabel.frame.size.width > lineWidth) {
+            return;
+        }
+        
+        CGFloat newX = xPosition - self.frame.origin.x;
+        
+        newX = (newX + self.processTitleLabel.frame.size.width > lineWidth)? lineWidth - self.processTitleLabel.frame.size.width:newX;
+        
+        self.processTitleLabel.frame = CGRectMake(newX,
+                                                  self.processTitleLabel.frame.origin.y,
+                                                  self.processTitleLabel.frame.size.width,
+                                                  self.processTitleLabel.frame.size.height);
+    } else if (textStartX > xPosition) {
+        
+        self.processTitleLabel.frame = CGRectMake([self calculateTextStartX],
+                                                  self.processTitleLabel.frame.origin.y,
+                                                  self.processTitleLabel.frame.size.width,
+                                                  self.processTitleLabel.frame.size.height);
+        
+    } else if (lineEndPoint < xPosition) {
+        
+        if (self.processTitleLabel.frame.size.width > lineWidth) {
+            return;
+        }
+        
+        self.processTitleLabel.frame = CGRectMake(lineWidth - self.processTitleLabel.frame.size.width,
+                                                  self.processTitleLabel.frame.origin.y,
+                                                  self.processTitleLabel.frame.size.width,
+                                                  self.processTitleLabel.frame.size.height);
+    }
+    
+    
+    
 }
 
 @end
