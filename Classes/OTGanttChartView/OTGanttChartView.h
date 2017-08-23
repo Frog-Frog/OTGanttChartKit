@@ -178,4 +178,7 @@ typedef NS_ENUM(NSInteger,OTGHorizontalScrollPosition)
 - (CGFloat)getSectionHeightAtSection:(NSInteger)section;
 - (CGFloat)getRowHeightAtIndexPath:(NSIndexPath *)indexPath;
 
+- (CGFloat)getProcessAreaHeightAtIndexPath:(NSIndexPath *)indexPath;
+- (CGFloat)getPointAreaHeightAtIndexPath:(NSIndexPath *)indexPath;
+
 @end

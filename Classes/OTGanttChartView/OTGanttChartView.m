@@ -1227,6 +1227,17 @@
 }
 
 
+- (CGFloat)getProcessAreaHeightAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.allRowProcessHeightArray[indexPath.section][indexPath.row] floatValue];
+}
+
+- (CGFloat)getPointAreaHeightAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.allRowPointHeightArray[indexPath.section][indexPath.row] floatValue];
+}
+
+
 #pragma mark - Get date on GanttChart
 - (NSInteger)getDateIndexFromXpoint:(CGFloat)x
 {
