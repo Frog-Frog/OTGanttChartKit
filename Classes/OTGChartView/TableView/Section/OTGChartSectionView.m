@@ -145,6 +145,8 @@
                                                                          lastDate:lastDate];
         [weakSelf addSubview:chartProcessView];
         
+        [chartProcessView trackingHorizontalScrollWithCurrentXPosition:weakSelf.currentContentOffsetX];
+        
     }];
 }
 
@@ -157,6 +159,7 @@
     chartProcessView.dateWidth = self.dateWidth;
     chartProcessView.indexPath = [NSIndexPath indexPathForRow:NSNotFound inSection:self.section];
     chartProcessView.textBackgroundColor = self.processAreaBackgroundColor;
+    chartProcessView.minimumProcessViewWidthDays = self.minimumProcessViewWidthDays;
     
     return chartProcessView;
 }

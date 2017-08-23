@@ -46,11 +46,11 @@ typedef NS_ENUM(NSInteger,OTGHorizontalScrollPosition)
 
 - (OTGChartProcessView *)ganttChartView:(OTGanttChartView *)ganttChartView chartProcessViewAtIndexPath:(NSIndexPath *)indexPath processNo:(NSInteger)processNo;
 
+@optional
+
 - (NSInteger)ganttChartView:(OTGanttChartView *)ganttChartView numberOfPointViewsForIndexPath:(NSIndexPath *)indexPath;
 
 - (OTGChartPointView *)ganttChartView:(OTGanttChartView *)ganttChartView chartPointViewAtIndexPath:(NSIndexPath *)indexPath pointNo:(NSInteger)pointNo;
-
-@optional
 
 - (NSInteger)numberOfSectionsInGanttChartView:(OTGanttChartView *)ganttChartView;
 
@@ -177,5 +177,8 @@ typedef NS_ENUM(NSInteger,OTGHorizontalScrollPosition)
 // If you use left menu, yow must use these method and get
 - (CGFloat)getSectionHeightAtSection:(NSInteger)section;
 - (CGFloat)getRowHeightAtIndexPath:(NSIndexPath *)indexPath;
+
+- (CGFloat)getProcessAreaHeightAtIndexPath:(NSIndexPath *)indexPath;
+- (CGFloat)getPointAreaHeightAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

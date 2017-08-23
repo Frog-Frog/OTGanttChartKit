@@ -345,6 +345,10 @@ static NSDateFormatter *dateFormatter;
             startDate:(NSDate *)startDate
              lastDate:(NSDate *)lastDate
 {
+    if (!date || !startDate || !lastDate) {
+        return NO;
+    }
+    
     date = [self adjustZeroClock:date];
     startDate = [self adjustZeroClock:startDate];
     lastDate = [self adjustZeroClock:lastDate];
@@ -508,7 +512,7 @@ static NSDateFormatter *dateFormatter;
 + (BOOL)isEqualToDay1:(NSDate *)date1
                  day2:(NSDate *)date2
 {
-    if (!date1 && !date2) return NO;
+    if (!date1 || !date2) return NO;
     
     date1 = [self adjustZeroClock:date1];
     date2 = [self adjustZeroClock:date2];

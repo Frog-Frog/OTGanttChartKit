@@ -18,7 +18,8 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
     GanttChartSectionTypeDiamond,
     GanttChartSectionTypeTriangle,
     GanttChartSectionTypeRatio,
-    GanttChartSectionTypeDotLine
+    GanttChartSectionTypeDotLine,
+    GanttChartSectionTypeTextTracking
 };
 
 @interface GanttChartViewController ()<UITableViewDataSource,UITableViewDelegate,OTGanttChartViewDataSource,OTGanttChartViewDelegate>
@@ -74,7 +75,7 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 7;
+    return 8;
 }
 
 
@@ -97,7 +98,7 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             return 3;
         
         case GanttChartSectionTypeDotLine:
-            
+        case GanttChartSectionTypeTextTracking:
             return 2;
     }
     return 0;
@@ -116,7 +117,8 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
     switch (indexPath.section) {
         case GanttChartSectionTypeNoFigure:
             
-            cellText = @"";
+            cellText = @"figureType = OTGFigureTypeNone";
+            
             break;
             
         case GanttChartSectionTypeCircle:
@@ -129,6 +131,7 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             } else if (indexPath.row == 1) {
                 cellText = @"isFill = YES";
             }
+            
             break;
             
         case GanttChartSectionTypeRatio:
@@ -152,6 +155,17 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             }
             
             break;
+            
+        case GanttChartSectionTypeTextTracking:
+            
+            if (indexPath.row == 0) {
+                cellText = @"textTrackingEnabled = NO";
+            } else if (indexPath.row == 1) {
+                cellText = @"textTrackingEnabled = YES";
+            }
+            
+            break;
+            
         default:
             break;
     }
@@ -210,6 +224,11 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             
             headerText = @"ProcessViewDotLine";
             break;
+        
+        case GanttChartSectionTypeTextTracking:
+            
+            headerText = @"ProcessViewTextTracking";
+            break;
             
         default:
             break;
@@ -265,7 +284,7 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
 #pragma mark - Section
 - (NSInteger)numberOfSectionsInGanttChartView:(OTGanttChartView *)ganttChartView
 {
-    return 7;
+    return 8;
 }
 
 
@@ -325,7 +344,11 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             processView.dateArray = @[[dateArray firstObject],[dateArray lastObject]];
             processView.isDotLine = YES;
             break;
+        
+        case GanttChartSectionTypeTextTracking:
             
+            processView.figureType = OTGFigureTypeCircle;
+            processView.textTrackingEnabled = YES;
     }
     
     
@@ -353,6 +376,7 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             
         case GanttChartSectionTypeRatio:
         case GanttChartSectionTypeDotLine:
+        case GanttChartSectionTypeTextTracking:
             
             return 0;
             
@@ -426,6 +450,7 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             return 3;
             
             case GanttChartSectionTypeDotLine:
+            case GanttChartSectionTypeTextTracking:
             
             return 2;
     }
@@ -450,6 +475,7 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
             
             case GanttChartSectionTypeRatio:
             case GanttChartSectionTypeDotLine:
+            case GanttChartSectionTypeTextTracking:
             
             return 1;
         
@@ -527,6 +553,19 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
                 processView.isDotLine = YES;
             }
             
+            break;
+        
+        case GanttChartSectionTypeTextTracking:
+            
+            processView.figureType = OTGFigureTypeCircle;
+            if (indexPath.row == 0) {
+                processView.textTrackingEnabled = NO;
+            } else if (indexPath.row == 1) {
+                processView.textTrackingEnabled = YES;
+            }
+            
+            break;
+            
         default:
             break;
     }
@@ -563,7 +602,6 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
 {
     OTGChartPointView *pointView = [[OTGChartPointView alloc]init];
     pointView.date = [OTGCommonClass createDate:[NSDate date] differenceDays:pointNo * 3];
-    
 
     switch (indexPath.section) {
             case GanttChartSectionTypeNoFigure:
@@ -623,78 +661,86 @@ typedef NS_ENUM(NSInteger, GanttChartSectionType)
 - (UIColor *)ganttChartView:(OTGanttChartView *)ganttChartView chartColorForSection:(NSInteger)section
 {
     switch (section) {
-            case GanttChartSectionTypeNoFigure:
+        case GanttChartSectionTypeNoFigure:
             
             return [UIColor redColor];
             
-            case GanttChartSectionTypeCircle:
+        case GanttChartSectionTypeCircle:
             
             return [UIColor blackColor];
             
-            case GanttChartSectionTypeSquare:
+        case GanttChartSectionTypeSquare:
             
             return [UIColor greenColor];
             
-            case GanttChartSectionTypeDiamond:
+        case GanttChartSectionTypeDiamond:
             
             return [UIColor blueColor];
             
-            case GanttChartSectionTypeTriangle:
+        case GanttChartSectionTypeTriangle:
             
             return [UIColor orangeColor];
             
-            case GanttChartSectionTypeRatio:
+        case GanttChartSectionTypeRatio:
             
             return [UIColor brownColor];
             
-            case GanttChartSectionTypeDotLine:
+        case GanttChartSectionTypeDotLine:
             
             return [UIColor cyanColor];
             
+        case GanttChartSectionTypeTextTracking:
+            
+            return [UIColor purpleColor];
+            
         default:
-            break;
+            
+            return [UIColor clearColor];
     }
-    
-    return [UIColor clearColor];
 }
 
 
 - (UIColor *)ganttChartView:(OTGanttChartView *)ganttChartView chartColorForIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.section) {
-            case GanttChartSectionTypeNoFigure:
+        case GanttChartSectionTypeNoFigure:
             
             return [UIColor redColor];
             
-            case GanttChartSectionTypeCircle:
+        case GanttChartSectionTypeCircle:
             
             return [UIColor blackColor];
             
-            case GanttChartSectionTypeSquare:
+        case GanttChartSectionTypeSquare:
             
             return [UIColor greenColor];
             
-            case GanttChartSectionTypeDiamond:
+        case GanttChartSectionTypeDiamond:
             
             return [UIColor blueColor];
             
-            case GanttChartSectionTypeTriangle:
+        case GanttChartSectionTypeTriangle:
             
             return [UIColor orangeColor];
             
-            case GanttChartSectionTypeRatio:
+        case GanttChartSectionTypeRatio:
             
             return [UIColor brownColor];
             
-            case GanttChartSectionTypeDotLine:
+        case GanttChartSectionTypeDotLine:
             
             return [UIColor cyanColor];
             
+        case GanttChartSectionTypeTextTracking:
+            
+            return [UIColor purpleColor];
+            
         default:
-            break;
+            
+            return [UIColor clearColor];
     }
     
-    return [UIColor clearColor];
+    
 }
 
 

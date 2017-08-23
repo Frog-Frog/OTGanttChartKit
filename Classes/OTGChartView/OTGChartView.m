@@ -318,6 +318,8 @@
     cell.processViewArray = self.allRowProcessViewArray[indexPath.section][indexPath.row];
     cell.pointViewArray = self.allRowPointViewArray[indexPath.section][indexPath.row];
     
+    cell.currentContentOffsetX = self.currentContentOffsetX;
+    
     [cell removeAllSubviews];
     
     [cell locationSubviews];
@@ -373,6 +375,8 @@
     
     chartSectionView.processViewArray = self.allSectionProcessViewArray[section];
     chartSectionView.pointViewArray = self.allSectionPointViewArray[section];
+    
+    chartSectionView.currentContentOffsetX = self.currentContentOffsetX;
     
     [chartSectionView removeAllSubviews];
     

@@ -59,6 +59,8 @@
     
     self.fontSize = OTGChartFontSize;
     
+    self.adjustFontSizeEnabled = NO;
+    
     self.figureType = OTGFigureTypeCircle;
     
     self.fontColor = [UIColor whiteColor];
@@ -140,8 +142,8 @@
                             fontColor:self.fontColor
                       backgroundColor:self.textBackgroundColor
                        textAllignment:NSTextAlignmentLeft
-                        lineBreakMode:NSLineBreakByTruncatingMiddle];
-
+                        lineBreakMode:NSLineBreakByTruncatingMiddle
+                     isAdjustFontSize:self.adjustFontSizeEnabled];
 }
 
 

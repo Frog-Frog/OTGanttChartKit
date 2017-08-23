@@ -43,7 +43,7 @@ static const CGFloat OTGDateWidth = 66.0f;
 static const CGFloat OTGMinimumSectionProcessAreaHeight = 0.0f;
 static const CGFloat OTGMinimumSectionPointAreaHeight = 0.0f;
 static const CGFloat OTGMinimumRowProcessAreaHeight = 50.0f;
-static const CGFloat OTGMinimumRowPointAreaHeight = 50.0f;
+static const CGFloat OTGMinimumRowPointAreaHeight = 0.0f;
 
 static const CGFloat OTGProcessViewMargin = 5.0f;
 

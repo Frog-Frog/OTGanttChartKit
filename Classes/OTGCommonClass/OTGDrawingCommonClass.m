@@ -109,15 +109,23 @@
    backgroundColor:(UIColor *)backgroundColor
     textAllignment:(NSTextAlignment)alligment
      lineBreakMode:(NSLineBreakMode)lineBreakMode
+  isAdjustFontSize:(BOOL)isAdjustFontSize
 {
     NSMutableParagraphStyle *style = [[NSParagraphStyle defaultParagraphStyle] mutableCopy];
     style.lineBreakMode = lineBreakMode;
     style.alignment = alligment;
     
-    CGSize stringSize = [string sizeWithAttributes:@{NSFontAttributeName : font}];
-    while(stringSize.width > rect.size.width || stringSize.height > rect.size.height){
-        font = [UIFont systemFontOfSize:font.pointSize -1];
-        stringSize = [string sizeWithAttributes:@{NSFontAttributeName : font}];
+    if (isAdjustFontSize) {
+        CGSize stringSize = [string sizeWithAttributes:@{NSFontAttributeName : font}];
+        while(stringSize.width > rect.size.width || stringSize.height > rect.size.height){
+            font = [UIFont systemFontOfSize:font.pointSize -1];
+            stringSize = [string sizeWithAttributes:@{NSFontAttributeName : font}];
+            
+            rect = CGRectMake(rect.origin.x,
+                              rect.origin.y + 0.5,
+                              rect.size.height,
+                              rect.size.width);
+        }
     }
     
     NSDictionary *attributes = @{

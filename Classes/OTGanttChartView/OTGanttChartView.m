@@ -473,7 +473,10 @@
 {
     NSMutableArray<OTGChartPointView *> *rowArray = [NSMutableArray array];
     
-    NSInteger pointCount = [self.dataSource ganttChartView:self numberOfPointViewsForIndexPath:indexPath];
+    NSInteger pointCount = 0;
+    if ([self.dataSource respondsToSelector:@selector(ganttChartView:numberOfPointViewsForIndexPath:)]) {
+        pointCount = [self.dataSource ganttChartView:self numberOfPointViewsForIndexPath:indexPath];
+    }
     
     for (NSInteger pointNo = 0; pointNo < pointCount; pointNo++) {
         
@@ -498,17 +501,19 @@
 
 - (OTGChartPointView *)createChartPointView:(NSIndexPath *)indexPath pointNo:(NSInteger)pointNo
 {
-    OTGChartPointView *chartPointView = [self.dataSource ganttChartView:self
-                                              chartPointViewAtIndexPath:indexPath
-                                                                pointNo:pointNo];
-    
-    if (!chartPointView.date) {
-        return  nil;
+    if ([self.dataSource respondsToSelector:@selector(ganttChartView:chartPointViewAtIndexPath:pointNo:)]) {
+        OTGChartPointView *chartPointView = [self.dataSource ganttChartView:self chartPointViewAtIndexPath:indexPath pointNo:pointNo];
+        
+        if (!chartPointView.date) {
+            return  nil;
+        }
+        
+        chartPointView.pointNo = pointNo;
+        
+        return chartPointView;
+    } else {
+        return nil;
     }
-    
-    chartPointView.pointNo = pointNo;
-    
-    return chartPointView;
 }
 
 
@@ -1227,6 +1232,17 @@
 }
 
 
+- (CGFloat)getProcessAreaHeightAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.allRowProcessHeightArray[indexPath.section][indexPath.row] floatValue];
+}
+
+- (CGFloat)getPointAreaHeightAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [self.allRowPointHeightArray[indexPath.section][indexPath.row] floatValue];
+}
+
+
 #pragma mark - Get date on GanttChart
 - (NSInteger)getDateIndexFromXpoint:(CGFloat)x
 {
@@ -1257,6 +1273,9 @@
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    self.chartView.currentContentOffsetX = scrollView.contentOffset.x;
+    [self trackingProcessViewLabel:scrollView.contentOffset.x];
+    
     if ([self.delegate respondsToSelector:@selector(ganttChartView:didHorizontalScroll:)]) {
         [self.delegate ganttChartView:self didHorizontalScroll:scrollView];
     }
@@ -1315,6 +1334,29 @@
             }
         }
     }
+}
+
+
+- (void)trackingProcessViewLabel:(CGFloat)xPosition
+{
+    [self.allSectionProcessViewArray enumerateObjectsUsingBlock:^(NSArray<OTGChartProcessView *> * _Nonnull sectionArray, NSUInteger idx, BOOL * _Nonnull stop) {
+        [sectionArray enumerateObjectsUsingBlock:^(OTGChartProcessView * _Nonnull processView, NSUInteger idx, BOOL * _Nonnull stop) {
+            if (processView.textTrackingEnabled) {
+                [processView trackingHorizontalScrollWithCurrentXPosition:xPosition];
+            }
+        }];
+    }];
+    
+    
+    [self.allRowProcessViewArray enumerateObjectsUsingBlock:^(NSArray<NSArray<OTGChartProcessView *> *> * _Nonnull sectionArray, NSUInteger idx, BOOL * _Nonnull stop) {
+        [sectionArray enumerateObjectsUsingBlock:^(NSArray<OTGChartProcessView *> * _Nonnull rowArray, NSUInteger idx, BOOL * _Nonnull stop) {
+            [rowArray enumerateObjectsUsingBlock:^(OTGChartProcessView * _Nonnull processView, NSUInteger idx, BOOL * _Nonnull stop) {
+                if (processView.textTrackingEnabled) {
+                    [processView trackingHorizontalScrollWithCurrentXPosition:xPosition];
+                }
+            }];
+        }];
+    }];
 }
 
 
