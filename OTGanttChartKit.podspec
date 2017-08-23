@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "OTGanttChartKit"
-  s.version      = “1.3”
+  s.version      = "1.3"
   s.summary      = "OTGanttChartKit is gantt chart framework for iOS. This framework use easily like UITableView."
   s.homepage     = "https://github.com/PKPK-Carnage/OTGanttChartKit"
   s.license      = { :type => "MIT", :file => "LICENSE" }
