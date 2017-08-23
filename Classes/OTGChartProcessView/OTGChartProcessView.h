@@ -76,6 +76,8 @@
 
 @property(nonatomic) CGFloat fontSize;
 
+@property(nonatomic) BOOL adjustFontSizeEnabled;
+
 @property(nonatomic) UIColor *fontColor;
 
 @property(nonatomic) UIColor *textBackgroundColor;

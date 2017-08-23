@@ -31,7 +31,7 @@
 
 @interface OTGChartPointView : UIView
 
-@property (nonatomic, weak) id<OTGChartPointViewDelegate> delegate;
+@property(nonatomic, weak) id<OTGChartPointViewDelegate> delegate;
 
 @property(nonatomic) NSIndexPath *indexPath;
 
@@ -55,9 +55,11 @@
 
 @property(nonatomic) CGFloat figureRightMargin;
 
-@property(nonatomic) NSString *title;
+@property(nonatomic,copy) NSString *title;
 
 @property(nonatomic) CGFloat fontSize;
+
+@property(nonatomic) BOOL adjustFontSizeEnabled;
 
 @property(nonatomic) UIColor *fontColor;
 

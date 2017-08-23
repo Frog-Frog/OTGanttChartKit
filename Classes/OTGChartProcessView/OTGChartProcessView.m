@@ -75,6 +75,8 @@
     self.textTrackingEnabled = NO;
     
     self.fontSize = OTGChartFontSize;
+
+    self.adjustFontSizeEnabled = NO;
     
     self.fontColor = [UIColor whiteColor];
     
@@ -130,6 +132,7 @@
     self.processTitleLabel.font = [UIFont systemFontOfSize:self.fontSize];
     self.processTitleLabel.textColor = self.fontColor;
     self.processTitleLabel.backgroundColor = self.textBackgroundColor;
+    self.processTitleLabel.minimumScaleFactor = (self.adjustFontSizeEnabled)? 0.5:1;
     
     [self addSubview:self.processTitleLabel];
 }
@@ -309,7 +312,8 @@
                             fontColor:self.fontColor
                       backgroundColor:self.textBackgroundColor
                        textAllignment:NSTextAlignmentLeft
-                        lineBreakMode:NSLineBreakByTruncatingMiddle];
+                        lineBreakMode:NSLineBreakByTruncatingMiddle
+                     isAdjustFontSize:self.adjustFontSizeEnabled];
 }
 
 

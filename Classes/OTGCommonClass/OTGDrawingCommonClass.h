@@ -51,7 +51,8 @@
          fontColor:(UIColor *)fontColor
    backgroundColor:(UIColor *)backgroundColor
     textAllignment:(NSTextAlignment)alligment
-     lineBreakMode:(NSLineBreakMode)lineBreakMode;
+     lineBreakMode:(NSLineBreakMode)lineBreakMode
+  isAdjustFontSize:(BOOL)isAdjustFontSize;
 
 
 +(void)drawCircle:(CGRect)circleRect

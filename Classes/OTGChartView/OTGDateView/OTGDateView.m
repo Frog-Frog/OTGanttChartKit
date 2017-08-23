@@ -85,7 +85,8 @@
                                 fontColor:fontColor
                           backgroundColor:[UIColor clearColor]
                            textAllignment:NSTextAlignmentCenter
-                            lineBreakMode:NSLineBreakByWordWrapping];
+                            lineBreakMode:NSLineBreakByWordWrapping
+                         isAdjustFontSize:YES];
         
         //曜日の描画
         NSString *weekString = [OTGCommonClass weekStringFromDate:date
@@ -97,7 +98,8 @@
                                 fontColor:fontColor
                           backgroundColor:[UIColor clearColor]
                            textAllignment:NSTextAlignmentCenter
-                            lineBreakMode:NSLineBreakByWordWrapping];
+                            lineBreakMode:NSLineBreakByWordWrapping
+                         isAdjustFontSize:YES];
     }];
 }
 
