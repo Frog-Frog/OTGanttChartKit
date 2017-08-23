@@ -473,7 +473,10 @@
 {
     NSMutableArray<OTGChartPointView *> *rowArray = [NSMutableArray array];
     
-    NSInteger pointCount = [self.dataSource ganttChartView:self numberOfPointViewsForIndexPath:indexPath];
+    NSInteger pointCount = 0;
+    if ([self.dataSource respondsToSelector:@selector(ganttChartView:numberOfPointViewsForIndexPath:)]) {
+        pointCount = [self.dataSource ganttChartView:self numberOfPointViewsForIndexPath:indexPath];
+    }
     
     for (NSInteger pointNo = 0; pointNo < pointCount; pointNo++) {
         
@@ -498,17 +501,19 @@
 
 - (OTGChartPointView *)createChartPointView:(NSIndexPath *)indexPath pointNo:(NSInteger)pointNo
 {
-    OTGChartPointView *chartPointView = [self.dataSource ganttChartView:self
-                                              chartPointViewAtIndexPath:indexPath
-                                                                pointNo:pointNo];
-    
-    if (!chartPointView.date) {
-        return  nil;
+    if ([self.dataSource respondsToSelector:@selector(ganttChartView:chartPointViewAtIndexPath:pointNo:)]) {
+        OTGChartPointView *chartPointView = [self.dataSource ganttChartView:self chartPointViewAtIndexPath:indexPath pointNo:pointNo];
+        
+        if (!chartPointView.date) {
+            return  nil;
+        }
+        
+        chartPointView.pointNo = pointNo;
+        
+        return chartPointView;
+    } else {
+        return nil;
     }
-    
-    chartPointView.pointNo = pointNo;
-    
-    return chartPointView;
 }
 
 
