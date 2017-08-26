@@ -1,6 +1,6 @@
 //
 //  OTGChartDrawView.m
-//  OTGanttChartView
+//  OTGanttChartKit
 //
 //  Created by Tomosuke Okada on 2017/08/01.
 //  Copyright © 2017年 TomosukeOkada. All rights reserved.
@@ -8,7 +8,7 @@
 //  https://github.com/PKPK-Carnage/OTGanttChartKit
 
 /**
- [OTGanttChartView]
+ [OTGanttChartKit]
  
  Copyright (c) [2017] [Tomosuke Okada]
  
