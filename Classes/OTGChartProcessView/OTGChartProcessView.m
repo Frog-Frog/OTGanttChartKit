@@ -375,18 +375,25 @@
 - (CGFloat)calculateProcessStartXFromPlaceCount:(NSInteger)placeCount
                                      isNotFound:(BOOL)isNotFound
 {
-    CGFloat startX = self.dateWidth * placeCount;
-    
-    if (placeCount == 0 && isNotFound == NO) {
-        if (self.figureType != OTGFigureTypeNone) {
-            //図形の描画がある場合は工程のスタートは図形の真ん中からにする
-            startX = self.figureLeftMargin + self.figureSize/2;
+    if (placeCount == 0) {
+        if (isNotFound) {
+            
+            return 0;
+        
+        } else {
+            if (self.figureType == OTGFigureTypeNone) {
+                
+                return self.startRatio * self.dateWidth;
+                
+            } else {
+            
+                return self.figureLeftMargin + self.figureSize/2;
+            
+            }
         }
-    } else {
-        startX = (self.startRatio == 0.0)? startX : self.startRatio * self.dateWidth;
     }
     
-    return startX;
+    return self.dateWidth * placeCount;
 }
 
 
