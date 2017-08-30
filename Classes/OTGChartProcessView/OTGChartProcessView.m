@@ -402,20 +402,13 @@
                                    lastDateIndex:(NSInteger)lastDateIndex
                                       isNotFound:(BOOL)isNotFound
 {
-    CGFloat finishX = self.dateWidth * placeCount + self.dateWidth;
-    
-    if (self.figureType != OTGFigureTypeNone) {
-        return finishX;
-    }
-    
     if (roopCount == lastDateIndex) {
         if (!isNotFound) {
-            finishX = (self.finishRatio == 1.0)? finishX : self.dateWidth * placeCount + self.finishRatio * self.dateWidth;
+            return  self.dateWidth * placeCount + self.finishRatio * self.dateWidth;
         }
-        
     }
     
-    return finishX;
+    return self.dateWidth * placeCount + self.dateWidth;
 }
 
 
