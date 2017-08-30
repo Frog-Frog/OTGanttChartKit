@@ -415,7 +415,9 @@
 #pragma mark - TapGesture
 - (void)tappedChartProcessView:(UITapGestureRecognizer *)sender
 {
-    [self.delegate tappedChartProcessView:self];
+    if ([self.delegate respondsToSelector:@selector(tappedChartProcessView:)]) {
+        [self.delegate tappedChartProcessView:self];
+    }
 }
 
 

@@ -150,7 +150,9 @@
 #pragma mark - TapGesture
 - (void)tappedChartPointView:(UITapGestureRecognizer *)sender
 {
-    [self.delegate tappedChartPointView:self];
+    if ([self.delegate respondsToSelector:@selector(tappedChartPointView:)]) {
+        [self.delegate tappedChartPointView:self];
+    }
 }
 
 
