@@ -1,10 +1,10 @@
-# OTGanttChartKit
-
-OTGanttChartKit is gantt chart framework for iOS. This framework use easily like UITableView.
+![OTGanttChartKitLogo.png](https://qiita-image-store.s3.amazonaws.com/0/152335/6c29f494-1cf4-8928-cd35-9ea0387b484d.png "OTGanttChartKitLogo.png")
 
 ## Description
+OTGanttChartKit is gantt chart framework for iOS. This framework use easily like UITableView.
 
 OTGanttChartKit has color and size adjust functions.
+
 You can show your original gantt chart.
 
 ## Demo
