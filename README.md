@@ -1,4 +1,4 @@
-![grdLogo3.png](https://qiita-image-store.s3.amazonaws.com/0/152335/956ae07b-701b-e2c2-b8cc-d1bbaeed463d.png "grdLogo3.png")
+![Logo](https://user-images.githubusercontent.com/20692907/29910168-cec649e6-8e63-11e7-85bb-c197bb1dc3c1.png)
 
 ## Description
 OTGanttChartKit is gantt chart framework for iOS. This framework use easily like UITableView.
